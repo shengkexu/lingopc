@@ -1,0 +1,35 @@
+.el-image-viewer__actions{
+  display: none !important;
+}
+.el-image-viewer__mask{
+  opacity: 1 !important;
+}
+.el-image-viewer__btn{
+  /* bottom: 40px !important; */
+
+}
+ .el-image-viewer__close{
+   font-size: 40px !important;
+   width: 100vw !important;
+   text-align: center !important;
+   left: 0 !important;
+   top: 75vh !important;
+   /* bottom: 50px!important; */
+ }
+.el-icon-circle-close{
+  color: white;
+}
+.el-loading-mask{
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.el-loading-spinner{
+  background-image:url('../assets/design.gif');
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 0 !important;
+  background-position: center;
+  background-size: contain;
+}
+.el-loading-spinner .circular {
+  display: none;
+}

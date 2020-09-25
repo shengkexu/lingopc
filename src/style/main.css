@@ -1,0 +1,703 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 2081736 */
+  src: url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.eot');
+  src: url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size: 16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face{
+  font-family: 'aliFontM';
+  src: url('../assets/fonts/ali-Medium.otf')
+}
+
+@font-face{
+  font-family: 'lackFontR';
+  src: url('../assets/fonts/lack-Regular.otf')
+}
+
+@font-face{
+  font-family: 'oppoFontR';
+  src: url('../assets/fonts/OPPOSans-R.ttf')
+}
+
+
+
+body{
+    /* background: green; */
+}
+
+#app{
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    /* max-height: 100vh; */
+}
+
+
+#mainNav{
+  /* position: fixed; */
+  background: red;
+  width: 100vw;
+}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 28px;
+  right: 18px;
+  z-index: 201;
+  -webkit-user-select: none;
+  user-select: none;
+  /* background: red; */
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #333;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0),
+              /* background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), */
+              /* opacity 0.55s ease; */
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+  width: 23px;
+}
+
+.ham1{
+  opacity: 1;
+  transform: rotate(45deg) translate(2.5px, 0px);
+}
+.ham2{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.ham3{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+.menuCon{
+  position: fixed;
+  width: 100vw;
+  z-index: 200;
+  /* background: yellow; */
+}
+.blueCircle{
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: #cdcdcd;
+  float: right;
+  margin-top: -150px;
+  margin-right: -150px;
+  transition: 0.8s all cubic-bezier(.85,0,.21,1);
+}
+
+.yellowCircle{
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: #eee;
+  float: right;
+  margin-top: -150px;
+  margin-right: -150px;
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+}
+.redCircle{
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: #ffffff;
+  float: right;
+  margin-top: -150px;
+  margin-right: -150px;
+  transition: 1.2s all cubic-bezier(.85,0,.21,1);
+}
+
+.blueCircleScale{
+  transform: scale(15);
+}
+.yellowCircleScale{
+  transform: scale(15);
+}
+.redCircleScale{
+  transform: scale(15);
+}
+
+.menu
+{
+  /* display: none;
+  opacity: 0; */
+  top: -100vh;
+  position: absolute;
+  z-index: 11;
+  width: 100vw;
+  height: 100vh;
+  /* padding-top: 120px; */
+  text-align: center;
+  /* background: #ededed; */
+  list-style-type: none;
+  /* -webkit-font-smoothing: antialiased; */
+  /* to stop flickering of text in safari */
+  transition: 0.3s all cubic-bezier(.85,0,.21,1);
+  transition-delay: 0.5s;
+  font-family: 'Noto Sans SC', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu a{
+  list-style: none;
+  text-decoration: none;
+  color: #000000;
+  /* transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
+}
+.menu ul{
+  margin-top: 70px;
+}
+
+.menuWord{
+  opacity: 0;
+  padding: 16px 0;
+  font-size: 22px;
+  transition: all 0.8s cubic-bezier(.85,0,.21,1);
+  transition-delay: 0.8s;
+  font-family: aliFontM;
+}
+
+.menuWord1{
+  margin-left: -60px;
+}
+.menuWord2{
+  margin-right: -60px;
+}
+.menuWord3{
+  margin-left: -60px;
+}
+.menuWord4{
+  margin-right: -60px;
+}
+
+.menuWordChange1{
+  opacity: 1;
+  margin-left: 0px;
+}
+
+.menuWordChange2{
+  opacity: 1;
+  margin-right: 0px;
+}
+
+.menuWordChange3{
+  opacity: 1;
+  margin-left: 0px;
+}
+
+.menuWordChange4{
+  opacity: 1;
+  margin-right: 0px;
+}
+
+
+
+/*
+ * And let's slide it in from the left
+ */
+/* #menuToggle input:checked ~ ul
+{
+  transform: none;
+} */
+
+.menuMain{
+  position: fixed;
+  /* margin-top: -3px; */
+  padding-top: 0px;
+  width: 100vw;
+  height: auto;
+}
+
+.menuBack{
+  position: absolute;
+  top: 0;
+  z-index: 30;
+}
+
+.menuImgCon{
+  margin-top: 80px;
+}
+
+.menuImg{
+  width: 84px;
+  height: 102px;
+}
+.menuInfoCon{
+  margin-bottom: 8px;
+}
+.menuAdress{
+  margin-bottom: 4px;
+  font-size: 8px;
+  color: #aaa;
+}
+.addressIcon{
+  font-size: 8px !important;
+}
+
+.caseCon{
+  width: 100%;
+  height: 100vh;
+  /* background: yellow; */
+  overflow: hidden;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainLogo{
+  margin-top: 16px;
+  width: 100px;
+  height: 46px;
+}
+.logo{
+  width: 180px;
+  height: 45px;
+  /* background: yellow; */
+  text-align: center;
+  /* transform: translate(-50%, 0); */
+  margin: 0 auto;
+}
+.ani{
+  animation: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+.thumbCon{
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  overflow: hidden;
+  /* background: url('../assets/thumbBack.png') repeat;
+  background-size: contain; */
+  height: 94px;
+  margin-top: 10px;
+  background: url('../assets/thumbBacka.png') repeat;
+}
+
+.thumbTitle{
+  font-size: 8px;
+  font-family: lackFontR;
+  color: #AAAAAA;
+  padding-top: 8px;
+  height: auto;
+}
+.thumbArrow{
+  margin-left: 5px;
+  font-size: 6px;
+}
+.thumbLine{
+  width: 1px;
+  height: 15px;
+  background: #FC4719;
+  margin: 0 auto;
+  /* margin-top: 6px; */
+}
+.thumbConS{
+  /* position: fixed; */
+  display: flex;
+  justify-content: flex-start;
+  width: 1920px;
+  margin-top: 5px;
+}
+.thumbImg{
+  width: 100px;
+  height: 50px;
+}
+
+.gifImg{
+width: 100%;
+}
+
+.bigShowCon{
+  /* margin: auto; */
+  /* margin-top: 75px; */
+  width: 100vw;
+  height: 439px;
+  /* background: blue; */
+  margin-top: 25px;
+  position: relative;
+}
+
+.test1{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 300px;
+  background: white;
+  z-index: 8;
+  left: 50%;
+  top: 50%;
+  /* box-shadow: 5px 10px 58px #333; */
+  transform: translate(-50%,-50%);
+  /* transition: 1s all cubic-bezier(.85,0,.21,1); */
+
+}
+.caseNumWordConP{
+  margin-top: 12px;
+  margin-right: 12px;
+  font-family: lackFontR;
+  font-size: 8px;
+  float: right;
+  color: #FC4719;
+}
+.caseNumWord{
+  margin-left: 8px;
+  margin-right: 5px;
+}
+.caseNumWordBlack{
+  color: #AAAAAA;
+}
+.caseLogo{
+  width: 48px;
+  height: auto;
+  clear: right;
+}
+.caseDesc{
+  margin-bottom: 8px;
+  margin-left: 12px;
+  float: left;
+  font-size: 8px;
+  color: #AAAAAA;
+  font-family: lackFontR;
+}
+.caseImg{
+  width: 350px;
+  height: 440px;
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  top: 50%;
+  margin-left: -175px;
+  margin-top: -220px;
+  opacity: 1;
+}
+.imgBack{
+  width: 251px;
+  height: 363px;
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: #C70000;
+  transition: background-color 1.5s;
+}
+.caseTitle{
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: aliFontM;
+  color: #333333;
+}
+
+.button1{
+  margin: auto;
+  margin-top: 30px;
+  width: 100px;
+  height: 50px;
+  background: green;
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+
+}
+
+
+
+.changePosition{
+  animation: slide 1s cubic-bezier(.85,0,.21,1);
+}
+
+@keyframes slide {
+  from {transform: none; opacity: 1}
+  40% {transform: rotate(-25deg) translate(-50px, -300px); opacity: 0}
+  60% {transform: rotate(25deg) translate(250px, 300px); opacity: 0}
+  to {transform: none; opacity: 1}
+}
+
+.changeColor{
+  background: pink;
+}
+
+/* caseDetail page */
+.caseDetailCon{
+  min-height: 100vh;
+}
+.caseLogoCon{
+  height: 100vh;
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fakeLogo{
+  display: block;
+  height: 45px;
+  width: 100vw;
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+}
+.mainBattle{
+  position: relative;
+  width: 100vw;
+  height: 439px;
+  margin-top: 25px;
+  /* background: white; */
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+}
+.caseTopLogo{
+  z-index: 15;
+  position: absolute;
+  top: 15px;
+  width: 100vw;
+}
+.caseTopLogo img{
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.caseDLogoCon{
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 200px;
+  height: 300px;
+  z-index: 11;
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+}
+.caseDLogo{
+  width: 48px;
+  height: auto;
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+}
+.caseColor{
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #C70000;
+  width: 251px;
+  height: 363px;
+  transition: 0.5s all cubic-bezier(.85,0,.21,1);
+}
+.caseDescCon{
+  /* background: green; */
+  position: absolute;
+  width: 100vw;
+  top: 70vh;
+  z-index: 11;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+}
+.caseDescL{
+  width: 180px;
+  height: 150px;
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.caseDescLTitle{
+  text-align: left;
+}
+.caseDescLTitle p{
+  margin-left: 36px;
+  margin-bottom: 8px;
+}
+.caseDescLTitleNum{
+  font-size: 10px;
+  font-family: lackFontR;
+}
+.caseDescLTitleB{
+  font-size: 18px;
+  font-family: aliFontM;
+}
+.caseDescLTitleDesc{
+  font-size: 8px;
+}
+.caseDescR{
+  width: 180px;
+  height: 150px;
+  /* background: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caseDescR img{
+  width: 64px;
+  height: auto;
+  opacity: 0.2;
+}
+.caseDescLDesigner{
+  text-align: left;
+}
+.caseDescLDesigner p{
+  margin-left: 36px;
+  margin-bottom: 8px;
+}
+.caseDescLDesignerTitle{
+  font-size: 12px;
+  font-family: aliFontM;
+}
+.caseDescLDesignerName{
+  font-size: 10px;
+  font-family: oppoFontR;
+}
+.fakeBot1{
+  display: block;
+  width: 100vw;
+  height: 46px;
+  /* background: black; */
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+}
+.fakeBot2{
+  display: block;
+  width: 100vw;
+  height: 94px;
+  margin-top: 10px;
+  /* background: yellow; */
+  transition: 1s all cubic-bezier(.85,0,.21,1);
+}
+.caseContentCon{
+  /* text-align: center; */
+  padding: 0 16px;
+}
+.caseContentImg{
+  width: 100%;
+  margin-top: 16px;
+  /* padding: 16px; */
+  height: auto;
+}
+.caseContentWordCon{
+  padding: 0 8px;
+}
+.caseContentTitle{
+  text-align: left;
+  width: 100%;
+  margin-top: 24px;
+  font-family: aliFontM;
+  font-size: 14px;
+  color: #333;
+}
+.caseContentDesc{
+  margin-top: 10px;
+  text-align: left;
+  font-family: oppoFontR;
+  font-size: 9px;
+  color: #999;
+  line-height: 23px;
+}
+.caseFooterCon{
+  margin-top: 64px;
+}
+.caseFooterTitleCon{
+  padding: 0 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.caseFooterTitle{
+  font-size: 10px;
+  font-family: aliFontM;
+  color: #333;
+}
+.caseFooterNum{
+  margin-top: 5px;
+  font-family: lackFontR;
+  font-size: 8px;
+  float: right;
+  color: #FC4719;
+}
+.thumbFooterNameCon{
+  margin-top: 18px;
+}
+.thumbFooterName{
+  font-family: aliFontM;
+  font-size: 20px;
+  color: #000;
+}
+.thumbFooterHint{
+  margin-top: 3px;
+  margin-bottom: 80px;
+  font-family: oppoFontR;
+  font-size: 12px;
+  color: #FC4719;
+}
+.arrowIcon{
+  margin-top: 6px;
+  width: 40px;
+  height: auto;
+}
