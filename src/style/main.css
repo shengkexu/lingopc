@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'iconfont';  /* project id 2081736 */
-  src: url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.eot');
-  src: url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2081736_l6pnc7gdpia.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_2081736_pxjcionab4.eot');
+  src: url('//at.alicdn.com/t/font_2081736_pxjcionab4.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2081736_pxjcionab4.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2081736_pxjcionab4.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2081736_pxjcionab4.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2081736_pxjcionab4.svg#iconfont') format('svg');
 }
 
 .iconfont{
@@ -19,6 +19,11 @@
 @font-face{
   font-family: 'aliFontM';
   src: url('../assets/fonts/ali-Medium.otf')
+}
+
+@font-face{
+  font-family: 'aliFontR';
+  src: url('../assets/fonts/ali-Regular.otf')
 }
 
 @font-face{
@@ -333,8 +338,8 @@ body{
 }
 
 .thumbTitle{
-  font-size: 8px;
-  font-family: lackFontR;
+  font-size: 10px;
+  font-family: aliFontR;
   color: #AAAAAA;
   padding-top: 8px;
   height: auto;
@@ -634,6 +639,7 @@ width: 100%;
 .caseContentCon{
   /* text-align: center; */
   padding: 0 16px;
+  box-sizing: border-box;
 }
 .caseContentImg{
   width: 100%;
@@ -659,6 +665,7 @@ width: 100%;
   font-size: 9px;
   color: #999;
   line-height: 23px;
+  /* white-space: pre-wrap; */
 }
 .caseFooterCon{
   margin-top: 64px;
@@ -681,6 +688,9 @@ width: 100%;
   float: right;
   color: #FC4719;
 }
+.noOpacity{
+  opacity: 0;
+}
 .thumbFooterNameCon{
   margin-top: 18px;
 }
@@ -689,15 +699,136 @@ width: 100%;
   font-size: 20px;
   color: #000;
 }
-.thumbFooterHint{
+/* .thumbFooterHint{
   margin-top: 3px;
   margin-bottom: 80px;
   font-family: oppoFontR;
   font-size: 12px;
   color: #FC4719;
-}
-.arrowIcon{
+} */
+/* .arrowIcon{
   margin-top: 6px;
   width: 40px;
   height: auto;
+} */
+.footerBtnCon1{
+  box-sizing: border-box;
+  padding: 16px 0px;
+  width: 100vw;
+  height: auto;
+  /* background: yellow; */
+}
+.footerBtnCon2{
+  box-sizing: border-box;
+  width: 100vw;
+  height: 60px;
+  /* background: pink; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 16px;
+}
+.backHomeBtn{
+  font-size: 10px;
+  color: #AAA;
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+.backTopBtn{
+  font-size: 10px;
+  color: #333;
+}
+.footerBtnDetail{
+  padding: 4px 10px;
+  /* background: green; */
+  width: 60px;
+  height: 22px;
+  border: 1px solid #000;
+  font-size: 10px;
+  font-family: aliFontM;
+  line-height: 22px;
+  margin: auto;
+  border-radius: 2px;
+}
+.fixButtonCon{
+  /* display: block; */
+  box-sizing: border-box;
+  position: fixed;
+  top: 60vh;
+  left: 0;
+  width: 100vw;;
+  /* background: red; */
+  z-index: 13;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 16px 0 16px;
+  opacity: 0;
+  transition: .2s opacity ease;
+}
+.fixButtonOut{
+  box-sizing: border-box;
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+  /* background: green; */
+}
+.fixBtn{
+  font-size: 30px;
+}
+.leftArrow{
+  transform: rotate(20deg) !important;
+}
+.scrollTop{
+  box-sizing: border-box;
+  text-align: right;
+  position: fixed;
+  top: 82vh;
+  right: 14px;
+  z-index: 13;
+  height: 44px;
+  padding: 8px;;
+  opacity: 0;
+  transition: 0.2 opacity ease;
+  /* background: green; */
+}
+
+.loadingCon{
+  position: fixed;
+  background-color: rgba(255, 255, 255, 1);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+}
+.loadingImg1{
+  width: 100px;
+  height: auto;
+  margin-top: 15vh;
+}
+.loadingImg2{
+  width: 100px;
+  height: auto;
+  margin-top: 40vh;
+}
+.loadingP1{
+  font-size: 12px;
+  font-family: aliFontR;
+  color: #FC4719;
+}
+.loadingP2{
+  font-size: 12px;
+  font-family: lackFontR;
+  margin-top: 30px;
+  color: #FFDCD3;
+}
+.image-slot{
+  line-height: 200px;
+  font-size: 12px;
+  width: 100% !important;
+  height: 200px !important;
+  background-color: rgba(245, 247, 250, 1) !important;
+  text-align: center;
 }

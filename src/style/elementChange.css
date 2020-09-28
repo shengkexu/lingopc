@@ -2,7 +2,7 @@
   display: none !important;
 }
 .el-image-viewer__mask{
-  opacity: 1 !important;
+  opacity: 0.8 !important;
 }
 .el-image-viewer__btn{
   /* bottom: 40px !important; */
@@ -22,8 +22,8 @@
 .el-loading-mask{
   background-color: rgba(255, 255, 255, 0.9) !important;
 }
-.el-loading-spinner{
-  background-image:url('../assets/design.gif');
+/* .el-loading-spinner{
+  background-image:url('../assets/loading.png');
   height: 100%;
   background-repeat: no-repeat;
   top: 0 !important;
@@ -32,4 +32,4 @@
 }
 .el-loading-spinner .circular {
   display: none;
-}
+} */
