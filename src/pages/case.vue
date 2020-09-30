@@ -9,7 +9,8 @@
               <img ref="caseTopLogoImg" src="../assets/menu/logo-f.png" alt="logo">
           </div>
           <div class="caseDLogoCon" ref="caseDLogoCon">
-            <img ref="caseDLogo" class="caseDLogo" :src="mainContent[currentIndex].logo" alt="xibei">
+            <img v-if="mainContent[currentIndex].type == 1" ref="caseDLogo" class="caseDLogo" :src="mainContent[currentIndex].logo" alt="xibei">
+            <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" :src="mainContent[currentIndex].logo" alt="xibei">
           </div>
           <div class="caseColor" ref="caseColor"></div>
           <div class="caseDescCon">
@@ -173,16 +174,20 @@
           <div class="thumbLine noOpacity"></div>
         </div>
         <div class="thumbFooterNameCon">
-          <p class="thumbFooterName">{{thumbArray2[currentIndexch].name}}</p>
+          <p class="thumbFooterName" @click="changeContent()">{{thumbArray2[currentIndexch].name}}</p>
           <div class="footerBtnCon1">
             <div class="footerBtnDetail" @click="changeContent()">
-              <p>查看详情</p>
+              <p>点击查看详情<i class="iconfont thumbArrow">&#xe656;</i></p>
             </div>
           </div>
           <div class="footerBtnCon2">
+            <p class="fakeBtn"></p>
             <p class="backHomeBtn" @click="gotoHome()">返回首页</p>
-            <p class="backTopBtn"  @click="scrollToTop()">回到顶部</p>
+            <p class="backTopBtn"  @click="scrollToTop()"><i class="iconfont iconTop">&#xe665;</i>回到顶部</p>
           </div>
+        </div>
+        <div class="footer">
+          <p>到底了哟~︿(￣︶￣)︿</p>
         </div>
       </div>
     </div>
@@ -316,7 +321,11 @@ export default {
       ref.caseDLogoCon.style.marginTop = '0'
       // ref.caseDLogoCon.style.margin = 'inherit'
       // ref.caseDLogoCon.style.transform = 'translate(0,0)'
-      ref.caseDLogo.style.width = '80px'
+      if(this.mainContent[this.currentIndex].type == 1){
+        ref.caseDLogo.style.width = '80px'
+      }else{
+        ref.caseDLogo2.style.width = '120px'
+      }
       ref.fixButtonCon.style.opacity = '0.3'
     }, 100)
     setTimeout(()=>{
@@ -352,12 +361,24 @@ export default {
           path: `/case/9`
         })
         this.currentIndexch = 8
+        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + currentWidth + ", 0)"
+        }
+        console.log(this.currentIndex)
       }else{
         this.currentIndex --
         this.$router.push({
           path: `/case/${this.thumbArray2[this.currentIndex].id}`
         })
         this.currentIndexch = this.currentIndex
+        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + currentWidth + ", 0)"
+        }
+        console.log(this.currentIndex)
       }
     },
     gotoNext(){
@@ -368,12 +389,24 @@ export default {
           path: `/case/1`
         })
         this.currentIndexch = 0
+        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + currentWidth + ", 0)"
+        }
+        console.log(this.currentIndex)
       }else{
         this.currentIndex ++
         this.$router.push({
           path: `/case/${this.thumbArray2[this.currentIndex].id}`
         })
         this.currentIndexch = this.currentIndex
+        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + currentWidth + ", 0)"
+        }
+        console.log(this.currentIndex)
       }
       // if(this.currentIndex<8){
       //   this.currentIndex ++
@@ -389,11 +422,13 @@ export default {
 
     },
     changeContent(){
-      this.scrollToTop()
-      this.$router.push({
-        path: `/case/${this.thumbArray2[this.currentIndexch].id}`
-      })
-      this.currentIndex = this.currentIndexch
+      if(this.currentIndex !== this.currentIndexch){
+        this.scrollToTop()
+        this.$router.push({
+          path: `/case/${this.thumbArray2[this.currentIndexch].id}`
+        })
+        this.currentIndex = this.currentIndexch
+      }
     },
     gotoHome(){
       this.$router.push({

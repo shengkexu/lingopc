@@ -43,6 +43,7 @@ var homeContent = [
     bcImg: mengniuMain,
     logoB: mengniuB,
     desc: '2019 - 包装设计&线上游戏视觉',
+    type: 1
   },
   {
     id: '2',
@@ -52,6 +53,7 @@ var homeContent = [
     bcImg: cixiMain,
     logoB: cixiB,
     desc: '2017 - vis视觉识别系统',
+    type: 1
   },
   {
     id: '3',
@@ -60,7 +62,8 @@ var homeContent = [
     url: xibei,
     bcImg: xibeiMain,
     logoB: xibeiB,
-    desc: '2019 - 小程序设计'
+    desc: '2019 - 小程序设计',
+    type: 1
   },
   {
     id: '4',
@@ -70,6 +73,7 @@ var homeContent = [
     bcImg: vankeMain,
     logoB: vankeB,
     desc: '2019 - vis视觉识别系统',
+    type: 1
   },
   {
     id: '5',
@@ -79,6 +83,7 @@ var homeContent = [
     bcImg: silkMain,
     logoB: silkB,
     desc: '2019 - 包装设计',
+    type: 1
   },
   {
     id: '6',
@@ -87,7 +92,8 @@ var homeContent = [
     url: zhixin,
     bcImg: zhixinMain,
     logoB: zhixinB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 1
   },
   {
     id: '7',
@@ -96,7 +102,8 @@ var homeContent = [
     url: zhongnan,
     bcImg: zhongnanMain,
     logoB: zhongnanB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   },
   {
     id: '8',
@@ -105,7 +112,8 @@ var homeContent = [
     url: xinyuan,
     bcImg: xinyuanMain,
     logoB: xinyuanB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   },
   {
     id: '9',
@@ -114,7 +122,8 @@ var homeContent = [
     url: shimao,
     bcImg: shimaoMain,
     logoB: shimaoB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   },
   {
     id: '1',
@@ -124,6 +133,7 @@ var homeContent = [
     bcImg: mengniuMain,
     logoB: mengniuB,
     desc: '2019 - 包装设计&线上游戏视觉',
+    type: 1
   },
   {
     id: '2',
@@ -133,6 +143,7 @@ var homeContent = [
     bcImg: cixiMain,
     logoB: cixiB,
     desc: '2017 - vis视觉识别系统',
+    type: 1
   },
   {
     id: '3',
@@ -141,7 +152,8 @@ var homeContent = [
     url: xibei,
     bcImg: xibeiMain,
     logoB: xibeiB,
-    desc: '2019 - 小程序设计'
+    desc: '2019 - 小程序设计',
+    type: 1
   },
   {
     id: '4',
@@ -151,6 +163,7 @@ var homeContent = [
     bcImg: vankeMain,
     logoB: vankeB,
     desc: '2019 - vis视觉识别系统',
+    type: 1
   },
   {
     id: '5',
@@ -160,6 +173,7 @@ var homeContent = [
     bcImg: silkMain,
     logoB: silkB,
     desc: '2019 - 包装设计',
+    type: 1
   },
   {
     id: '6',
@@ -168,7 +182,8 @@ var homeContent = [
     url: zhixin,
     bcImg: zhixinMain,
     logoB: zhixinB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 1
   },
   {
     id: '7',
@@ -177,7 +192,8 @@ var homeContent = [
     url: zhongnan,
     bcImg: zhongnanMain,
     logoB: zhongnanB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   },
   {
     id: '8',
@@ -186,7 +202,8 @@ var homeContent = [
     url: xinyuan,
     bcImg: xinyuanMain,
     logoB: xinyuanB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   },
   {
     id: '9',
@@ -195,7 +212,8 @@ var homeContent = [
     url: shimao,
     bcImg: shimaoMain,
     logoB: shimaoB,
-    desc: '2019 - vis视觉识别系统'
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   }
 ]
 

@@ -1,18 +1,19 @@
 <template>
   <div class="">
-    <Loading v-if="loading"/>
+    <!-- <Loading v-bind:percentage="percentage" v-if="loading"/> -->
     <Menu/>
     <div class="caseCon" ref="homeCon">
       <div class="logo">
         <img class="mainLogo" src="../assets/menu/logo-f.png" alt="logo">
       </div>
-      <div class="bigShowCon" @click="gotoDetail()" v-if="thumbArray.length !== 0">
+      <div class="bigShowCon entranceAniR" @click="gotoDetail()" v-if="thumbArray.length !== 0">
         <div class="test1">
           <div class="caseConUpCon1">
             <p class="caseNumWordConP">NO.<span :class="{'ani' : isRotate}">{{thumbArray[currentContentIndex].id}}</span><span class="caseNumWordBlack"><span class="caseNumWord">|</span>{{thumbArray.length/2}}</span></p>
           </div>
           <div class="caseConUpCon2">
-            <img class="caseLogo" :class="{'ani' : isRotate}" :src="thumbArray[currentContentIndex].logoB" alt="">
+            <img v-if="thumbArray[currentContentIndex].type == 1" class="caseLogo" :src="thumbArray[currentContentIndex].logoB" alt="">
+            <img v-if="thumbArray[currentContentIndex].type == 2" class="caseLogo2" :src="thumbArray[currentContentIndex].logoB" alt="">
           </div>
           <div class="caseConUpCon3">
             <p class="caseDesc" :class="{'ani' : isRotate}">{{thumbArray[currentContentIndex].desc}}</p>
@@ -23,18 +24,18 @@
       </div>
 
         <!-- <img src="../assets/design.gif" alt="design" class="gifImg"> -->
-      <div class="caseTitleCon" v-if="thumbArray.length !== 0">
-        <p class="caseTitle" :class="{'ani' : isRotate}">{{thumbArray[currentContentIndex].name}}</p>
+      <div class="caseTitleCon" v-if="thumbArray.length !== 0" @click="gotoDetail()">
+        <p class="caseTitle">{{thumbArray[currentContentIndex].name}}</p>
         <p class="thumbTitle">点击查看详情<i class="iconfont thumbArrow">&#xe656;</i></p>
       </div>
 
-      <div class="thumbCon" v-if="thumbArray.length !== 0">
-        <div class="thumbLine"></div>
-        <div class="thumbConS">
-          <img v-if="!isRotate" class="thumbImg" :style="thumbStyle" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index" @click="clickThumb(index)">
-          <img v-if="isRotate" class="thumbImg" :style="thumbStyle" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index">
+      <div class="thumbCon" v-if="thumbArray.length !== 0"  @scroll="onScroll()">
+        <!-- <div class="thumbLine"></div> -->
+        <div class="thumbConS" ref="scrollDiv">
+          <img v-if="!isRotate" :style="thumbStyle" class="thumbImg" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index" @click="clickThumb(index)">
+          <!-- <img v-if="isRotate" class="thumbImg" :style="thumbStyle" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index"> -->
         </div>
-        <div class="thumbLine"></div>
+        <!-- <div class="thumbLine"></div> -->
       </div>
     </div>
   </div>
@@ -56,9 +57,11 @@ export default {
   data(){
     return{
       loading: true,
+      percentage: 0,
       isRotate: false,
       isColor: false,
       thumbStyle: {},
+      scrollLeft: 0,
       currentIndex: 8,
       currentContentIndex: 8,
       screenWidth: document.body.clientWidth,
@@ -97,7 +100,7 @@ export default {
         setTimeout(()=>{
           this.currentContentIndex = this.currentIndex
           this.$refs.imgBack.style.background = this.thumbArray[this.currentContentIndex].color
-        },500)
+        },280)
 
         if(this.isRotate == true){
           console.log('antialiased')
@@ -107,13 +110,44 @@ export default {
           setTimeout(()=>{
             this.isRotate = false
             this.isColor = false
-          },1500)
+          },700)
         }
       }
     },
     onResize(){
       this.screenHeight = window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight
       this.screenWidth = document.body.clientWidth
+    },
+    onScroll(){
+      let n1 = 0;
+      let n2 = 0;
+      var ml = this.$refs.scrollDiv.getBoundingClientRect().left;
+      let timer = null;
+      clearTimeout(timer)
+
+      timer = setTimeout(()=>{
+        n1 = this.$refs.scrollDiv.getBoundingClientRect().left
+        n2 = this.$refs.scrollDiv.getBoundingClientRect().left
+
+        if(n1 == n2){
+          console.log('gun')
+          if(n1%100 >= -50){
+            var controlLength = parseInt(ml/100)*100-n1 + 'px'
+            this.thumbStyle = {
+              transition: '0.5s all ease',
+              transform: "translate(" + controlLength + ", 0)"
+            }
+          }else if(n1%100 <-50){
+            var controlLength = (parseInt(ml/100)-1)*100-n1 + 'px'
+            this.thumbStyle = {
+              transition: '0.5s all ease',
+              transform: "translate(" + controlLength + ", 0)"
+            }
+          }
+        }
+      },10)
+      //console.log(this.$refs.scrollDiv.getBoundingClientRect().left)
+
     },
     gotoDetail(){
       if(this.isRotate == false){
@@ -126,47 +160,15 @@ export default {
   mounted(){
     this.$nextTick(() => {
       var that = this
-      // loading判定
-      console.log(that.thumbArray == undefined)
-      if(that.homeImgArray.length !== 0){
-        var loaded = 0
-        var array = that.homeImgArray
-        var aaa = []
-        //console.log(array)
-
-        for(var i=0; i<array.length; i++){
-          aaa[i] = new Image()
-          aaa[i].src = array[i]
-          aaa[i].onload = function(){
-            //一张加载完成
-            loaded = loaded+1
-            if(loaded == 18){
-              that.loading = false
-            }
-          }
-        }
-
-
-
-        //console.log(iii)
-        // if(loaded == array.length){
-        //   alert('sds')
-        // }
-        //alert(loaded)
-      }else{
-        console.log('ddddd')
-      }
-
-
-
       window.addEventListener('resize', that.onResize);
+      //window.addEventListener('scroll', that.onScroll);
       that.currentContentIndex = that.currentIndex
       this.$refs.imgBack.style.background = this.thumbArray[this.currentContentIndex].color
-      var currentWidth = that.screenWidth/2 - 50 - that.currentIndex*100 + 'px'
-      that.thumbStyle = {
-        transition: '0.5s all ease',
-        transform: "translate(" + currentWidth + ", 0)"
-      }
+      // var currentWidth = that.screenWidth/2 - 50 - that.currentIndex*100 + 'px'
+      // that.thumbStyle = {
+      //   transition: '0.5s all ease',
+      //   transform: "translate(" + currentWidth + ", 0)"
+      // }
       that.screenHeight = window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight
 
       var heightString = (that.screenHeight).toString()
@@ -178,6 +180,7 @@ export default {
   },
   beforeUnmount(){
     window.removeEventListener('resize', this.onResize);
+    //window.removeEventListener('scroll', this.onScroll);
   },
   watch: {
     screenWidth(val){
@@ -200,6 +203,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+div::-webkit-scrollbar {
+  width: 0;
+}
 </style>
