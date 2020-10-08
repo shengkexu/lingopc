@@ -87,36 +87,32 @@ body{
 {
   display: block;
   width: 20px;
-  height: 2px;
+  height: 1.5px !important;
   margin-bottom: 5px;
   position: relative;
-
   background: #333;
   border-radius: 3px;
-
   z-index: 1;
-
   transform-origin: 4px 0px;
-
-  transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0),
-              /* background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), */
-              /* opacity 0.55s ease; */
+  transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menuToggle span:first-child
 {
+  /* height: 2px !important; */
   transform-origin: 0% 0%;
 }
 
 #menuToggle span:nth-last-child(2)
 {
+  /* height: 2px !important; */
   transform-origin: 0% 100%;
   width: 23px;
 }
 
 .ham1{
   opacity: 1;
-  transform: rotate(45deg) translate(2.5px, 0px);
+  transform: rotate(45deg) translate(2px, -1px);
 }
 .ham2{
   opacity: 0;
@@ -297,13 +293,21 @@ body{
 .caseCon{
   width: 100%;
   height: 100vh;
-  /* background: yellow; */
   overflow: hidden;
-  /* position: relative; */
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
+
+
+.caseConUpCon3B{
+  display: none;
+}
+
+
+
 .mainLogo{
   margin-top: 16px;
   width: 100px;
@@ -322,9 +326,13 @@ body{
   animation-duration: 0.5s;
   animation-delay: 0.28s;
 }
+.thumbConRe{
+  position: relative;
+}
 
 .thumbCon{
   /* position: absolute; */
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -338,7 +346,14 @@ body{
   display: flex;
   justify-content: center;
   width: 2075px;
-  margin-top: 5px;
+  margin-top: 22px;
+  margin-left: 0px;
+}
+.thumbConS2{
+  display: flex;
+  justify-content: center;
+  width: 2075px;
+  margin-top: 22px;
   margin-left: 0px;
 }
 
@@ -354,11 +369,21 @@ body{
   font-size: 6px;
 }
 .thumbLine{
+  position: absolute;
   width: 1px;
   height: 15px;
   background: #FC4719;
-  margin: 0 auto;
-  /* margin-top: 6px; */
+  left: 50%;
+  margin-left: -0.5px;
+}
+.thumbLine2{
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background: #FC4719;
+  left: 50%;
+  margin-left: -0.5px;
+  margin-top: 79px;
 }
 
 .thumbImg{
@@ -366,9 +391,9 @@ body{
   height: 50px;
 }
 
-.gifImg{
-width: 100%;
-}
+/* .gifImg{
+  width: 100%;
+} */
 
 .bigShowCon{
   /* margin: auto; */
@@ -858,4 +883,54 @@ width: 100%;
 .entranceAniR{
   animation: rotateInDownLeft;
   animation-duration: 0.5s;
+}
+
+
+
+
+/* 自适应 */
+@media screen and (min-width: 1024px){
+  .blueCircleScale{
+    transform: scale(30);
+  }
+  .yellowCircleScale{
+    transform: scale(30);
+  }
+  .redCircleScale{
+    transform: scale(30);
+  }
+
+
+
+
+
+
+
+  .caseTitleCon{
+    position: absolute;
+    left: 75%;
+    top: 45%;
+    text-align: left;
+  }
+  .caseConUpCon3B{
+    margin-top: 20px;
+    display: block;
+  }
+  .caseTitle{
+    margin-top: 10px;
+    font-size: 36px;
+    font-family: aliFontM;
+    color: #333333;
+  }
+  .caseDesc{
+    margin-top: 34px;
+    /* margin-bottom: 8px; */
+    margin-left: 0px;
+    font-size: 13px;
+    float: none;
+  }
+  .thumbTitle{
+    margin-top: 30px;
+    font-size: 16px;
+  }
 }

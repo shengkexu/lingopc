@@ -11,6 +11,7 @@
           <div class="caseDLogoCon" ref="caseDLogoCon">
             <img v-if="mainContent[currentIndex].type == 1" ref="caseDLogo" class="caseDLogo" :src="mainContent[currentIndex].logo" alt="xibei">
             <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" :src="mainContent[currentIndex].logo" alt="xibei">
+            <!-- <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" src="../assets/loading.png" alt="xibei"> -->
           </div>
           <div class="caseColor" ref="caseColor"></div>
           <div class="caseDescCon">
@@ -41,6 +42,9 @@
           class="caseContentImg"
           :src="mainContent[currentIndex].cover.src"
           :preview-src-list="mainContent[currentIndex].cover.srcList">
+          <div slot="placeholder" class="image-slot">
+            加载中<span class="dot">... o(￣▽￣)ｄ</span>
+          </div>
         </el-image>
         <div class="caseContentWordCon">
           <p class="caseContentTitle">{{mainContent[currentIndex].name}}</p>
@@ -67,6 +71,9 @@
           class="caseContentImg"
           :src="mainContent[currentIndex].cover1.src"
           :preview-src-list="mainContent[currentIndex].cover1.srcList">
+          <div slot="placeholder" class="image-slot">
+            加载中<span class="dot">... o(￣▽￣)ｄ</span>
+          </div>
         </el-image>
         <div class="caseContentWordCon">
           <p class="caseContentTitle">{{mainContent[currentIndex].name}}</p>
@@ -78,6 +85,9 @@
           class="caseContentImg"
           :src="mainContent[currentIndex].cover2.src"
           :preview-src-list="mainContent[currentIndex].cover2.srcList">
+          <div slot="placeholder" class="image-slot">
+            加载中<span class="dot">... o(￣▽￣)ｄ</span>
+          </div>
         </el-image>
         <div class="caseContentWordCon">
           <p class="caseContentDesc">
@@ -103,6 +113,9 @@
           class="caseContentImg"
           :src="mainContent[currentIndex].cover.src"
           :preview-src-list="mainContent[currentIndex].cover.srcList">
+          <div slot="placeholder" class="image-slot">
+            加载中<span class="dot">... o(￣▽￣)ｄ</span>
+          </div>
         </el-image>
         <div class="caseContentWordCon">
           <p class="caseContentTitle">{{mainContent[currentIndex].name1}}</p>
@@ -164,17 +177,20 @@
       <div class="caseFooterCon" ref="bottomDiv">
         <div class="caseFooterTitleCon">
           <p class="caseFooterTitle">其他案例</p>
-          <p class="caseFooterNum">NO.<span>{{thumbArray2[currentIndexch].id}}</span><span class="caseNumWordBlack"><span class="caseNumWord">|</span>{{mainContent.length}}</span></p>
+          <p class="caseFooterNum">NO.<span>{{thumbArray[currentIndexch].id}}</span><span class="caseNumWordBlack"><span class="caseNumWord">|</span>{{mainContent.length}}</span></p>
         </div>
-        <div class="thumbCon">
-          <div class="thumbLine"></div>
-          <div class="thumbConS">
-            <img class="thumbImg" :style="thumbStyle" v-for="(thumb, index) in thumbArray2" :src="thumb.url" :alt="thumb.id" :key="index" @click="clickThumb(index)">
+        <div class="thumbConRe">
+          <div class="thumbCon" v-if="thumbArray.length !== 0"  @scroll="onScroll()">
+            <div class="thumbLine"></div>
+            <div class="thumbConS2" ref="scrollDiv2">
+              <img :style="thumbStyle" class="thumbImg" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index" @click="clickThumb(index)">
+              <!-- <img v-if="isRotate" class="thumbImg" :style="thumbStyle" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index"> -->
+            </div>
+            <!-- <div class="thumbLine2"></div> -->
           </div>
-          <div class="thumbLine noOpacity"></div>
         </div>
         <div class="thumbFooterNameCon">
-          <p class="thumbFooterName" @click="changeContent()">{{thumbArray2[currentIndexch].name}}</p>
+          <p class="thumbFooterName" @click="changeContent()">{{thumbArray[currentIndexch].name}}</p>
           <div class="footerBtnCon1">
             <div class="footerBtnDetail" @click="changeContent()">
               <p>点击查看详情<i class="iconfont thumbArrow">&#xe656;</i></p>
@@ -212,19 +228,9 @@
 </template>
 
 <script>
+import thumbArrayTest from '../utils/homeContent.js'
 import caseDetail from '../utils/caseDetail.js'
 import Menu from '../components/Menu.vue'
-
-import xibei1 from '../assets/caseDetail/xibei/xibei1.jpg'
-import xibei from '../assets/caseThumb/xibeilogo.png'
-import mengniu from '../assets/caseThumb/menglogo.png'
-import cixi from '../assets/caseThumb/cixilogo.png'
-import silk from '../assets/caseThumb/silklogo.png'
-import vanke from '../assets/caseThumb/vankelogo.png'
-import zhixin from '../assets/caseThumb/zhixinlogo.png'
-import zhongnan from '../assets/caseThumb/zhongnanlogo.png'
-import xinyuan from '../assets/caseThumb/xinyuanlogo.png'
-import shimao from '../assets/caseThumb/shimaologo.png'
 
 export default {
   name: 'casePage',
@@ -234,65 +240,14 @@ export default {
   data(){
     return{
       caseId: '',
-      src: xibei1,
-      srcList: [
-        xibei1
-      ],
       thumbStyle: {},
       screenWidth: document.body.clientWidth,
-      currentIndex: 2,
-      currentIndexch: 2,
+      currentIndex: 1,
+      currentIndexch: 1,
       bottomHeight: 0,
       mainContent: caseDetail,
-      //screenHeight: window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight,
       scrollHeight: document.body.scrollTop,
-      thumbArray2:[
-        {
-          id: '1',
-          name: '蒙牛',
-          url: mengniu,
-        },
-        {
-          id: '2',
-          name: '粢喜',
-          url: cixi,
-        },
-        {
-          id: '3',
-          name: '西贝莜面村',
-          url: xibei,
-        },
-        {
-          id: '4',
-          name: '万科',
-          url: vanke,
-        },
-        {
-          id: '5',
-          name: 'Silk',
-          url: silk,
-        },
-        {
-          id: '6',
-          name: '质心',
-          url: zhixin,
-        },
-        {
-          id: '7',
-          name: '中南集团',
-          url: zhongnan,
-        },
-        {
-          id: '8',
-          name: '鑫沅资产',
-          url: xinyuan,
-        },
-        {
-          id: '9',
-          name: '世茂',
-          url: shimao,
-        }
-      ]
+      thumbArray: thumbArrayTest,
     }
   },
   beforeUnmount(){
@@ -337,20 +292,22 @@ export default {
       this.$refs.caseTopLogoImg.style.opacity = '1'
     },1000)
     this.$nextTick(() => {
-      //console.log(this.scrollHeight)
       window.addEventListener('scroll', this.handleScroll)
       window.addEventListener('resize', this.onResize)
-      //this.screenHeight = window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight
       var casenum = parseInt(this.caseId);
       this.currentIndex = (casenum-1).toString()
       this.currentIndexch = this.currentIndex
-      var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+
+      var scrollWidth = this.thumbArray.length*100 + this.screenWidth - 100 + 'px'
+      console.log(scrollWidth)
+      this.$refs.scrollDiv2.style.width = scrollWidth
+
+      var initLength = -(this.caseId-1)*100 + 'px'
       this.thumbStyle = {
         transition: '0.5s all ease',
-        transform: "translate(" + currentWidth + ", 0)"
+        transform: "translate(" + initLength + ", 0)"
       }
     })
-    // console.log(this.thumbArray2[this.currentIndex].id)
   },
   methods: {
     gotoLast(){
@@ -361,22 +318,25 @@ export default {
           path: `/case/9`
         })
         this.currentIndexch = 8
-        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
         this.thumbStyle = {
           transition: '0.5s all ease',
-          transform: "translate(" + currentWidth + ", 0)"
+          transform: "translate(" + moveDistance + ", 0)"
         }
         console.log(this.currentIndex)
       }else{
         this.currentIndex --
         this.$router.push({
-          path: `/case/${this.thumbArray2[this.currentIndex].id}`
+          path: `/case/${this.thumbArray[this.currentIndex].id}`
         })
         this.currentIndexch = this.currentIndex
-        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
         this.thumbStyle = {
           transition: '0.5s all ease',
-          transform: "translate(" + currentWidth + ", 0)"
+          transform: "translate(" + moveDistance + ", 0)"
         }
         console.log(this.currentIndex)
       }
@@ -389,45 +349,37 @@ export default {
           path: `/case/1`
         })
         this.currentIndexch = 0
-        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+        //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
         this.thumbStyle = {
           transition: '0.5s all ease',
-          transform: "translate(" + currentWidth + ", 0)"
+          transform: "translate(" + moveDistance + ", 0)"
         }
-        console.log(this.currentIndex)
+        console.log(this.mainContent[this.currentIndex].type)
       }else{
         this.currentIndex ++
         this.$router.push({
-          path: `/case/${this.thumbArray2[this.currentIndex].id}`
+          path: `/case/${this.thumbArray[this.currentIndex].id}`
         })
         this.currentIndexch = this.currentIndex
-        var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
         this.thumbStyle = {
           transition: '0.5s all ease',
-          transform: "translate(" + currentWidth + ", 0)"
+          transform: "translate(" + moveDistance + ", 0)"
         }
-        console.log(this.currentIndex)
+        console.log(this.mainContent[this.currentIndex].type)
       }
-      // if(this.currentIndex<8){
-      //   this.currentIndex ++
-      //   this.$router.push({
-      //     path: `/case/${this.thumbArray2[this.currentIndex].id}`
-      //   })
-      // }else{
-      //   this.currentIndex = 0
-      //   this.$router.push({
-      //     path: `/case/1}`
-      //   })
-      // }
-
     },
     changeContent(){
       if(this.currentIndex !== this.currentIndexch){
         this.scrollToTop()
         this.$router.push({
-          path: `/case/${this.thumbArray2[this.currentIndexch].id}`
+          path: `/case/${this.thumbArray[this.currentIndexch].id}`
         })
-        this.currentIndex = this.currentIndexch
+        this.currentIndex = this.thumbArray[this.currentIndexch].id-1
+        console.log(this.currentIndex)
       }
     },
     gotoHome(){
@@ -435,26 +387,62 @@ export default {
         path: '/'
       })
     },
+    onScroll(){
+      clearTimeout(timer)
+      let n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+      let n2 = 0
+      var ml = this.$refs.scrollDiv2.getBoundingClientRect().left;
+      var type = 0
+      let timer = null
+      var once = false
+
+      timer = setTimeout(()=>{
+        n2 = this.$refs.scrollDiv2.getBoundingClientRect().left
+        if(n1 == n2){
+          if(n1%100 >= -50){
+            type = 1
+          }else if(n1%100 <-50){
+            type = 2
+          }
+          if(type ==1){
+              var controlLength = parseInt(ml/100)*100-n1 + 'px'
+              this.thumbStyle = {
+                transition: '0.5s all ease',
+                transform: "translate(" + controlLength + ", 0)"
+              }
+              console.log(parseInt(ml/100))
+              this.currentIndexch = -(parseInt(ml/100))
+          }else if (type == 2) {
+            var controlLength = (parseInt(ml/100)-1)*100-n1 + 'px'
+            this.thumbStyle = {
+              transition: '0.5s all ease',
+              transform: "translate(" + controlLength + ", 0)"
+            }
+            console.log(-parseInt(ml/100))
+            this.currentIndexch = -(parseInt(ml/100)-1)
+          }
+        }
+      },70)
+    },
     clickThumb(index){
-    //  var currentWidth = this.screenWidth/2 - 50 - index*100 + 'px'
-      var currentWidth = this.screenWidth/2 - 50 - index*100 + 'px'
+      var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+      var moveDistance = (0-index)*100-n1 + 'px'
       this.currentIndexch = index
       console.log(index)
       this.thumbStyle = {
         transition: '0.5s all ease',
-        transform: "translate(" + currentWidth + ", 0)"
+        transform: "translate(" + moveDistance + ", 0)"
       }
     },
     handleScroll(){
+      //console.log('dsads')
       this.bottomHeight = this.$refs.bottomDiv.getBoundingClientRect().top
       if(this.bottomHeight <=750){
-        //this.$refs.fixButtonCon.style.opacity = '0'
         this.$refs.fixButtonCon.style.display = 'none'
       }else{
         this.$refs.fixButtonCon.style.display = 'flex'
         this.$refs.fixButtonCon.style.opacity = '0.3'
       }
-      //console.log(this.bottomHeight)
       this.scrollHeight = document.body.scrollTop || document.documentElement.scrollTop
       if(this.scrollHeight <= 600){
         this.$refs.scrollTopBtn.style.opacity = '0'
@@ -476,19 +464,20 @@ export default {
         behavior: 'smooth'
       });
     }
-    // onResize(){
-    //   this.screenHeight = window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight
-    // }
   },
   watch: {
     currentIndex(val){
       this.$refs.caseColor.style.background = this.mainContent[val].color
+      this.$nextTick(()=>{
+        setTimeout(()=>{
+          if(this.mainContent[val].type == 1){
+            this.$refs.caseDLogo.style.width = '80px'
+          }else{
+            this.$refs.caseDLogo2.style.width = '120px'
+          }
+        },100)
+      })
     }
-    // scrollHeight(val){
-    //   this.scrollHeight = val
-    //   console.log(this.scrollHeight)
-    //   //this.$refs.fixButtonCon.style.top =
-    // }
   }
 }
 </script>
