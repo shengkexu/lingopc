@@ -34,6 +34,18 @@ import shimao from '../assets/caseThumb/shimaologo.png'
 import shimaoMain from '../assets/caseMain/shimao/shimaoMain.png'
 import shimaoB from '../assets/caseMain/shimao/shimao.png'
 
+import hengshoutang from '../assets/caseThumb/hengshoutanglogo.png'
+import hengshoutangMain from '../assets/caseMain/hengshoutang/hengshoutangMain.png'
+import hengshoutangB from '../assets/caseMain/hengshoutang/hengshoutang.png'
+
+import kajieshi from '../assets/caseThumb/kajieshilogo.png'
+import kajieshiMain from '../assets/caseMain/kajieshi/kajieshiMain.png'
+import kajieshiB from '../assets/caseMain/kajieshi/kajieshi.png'
+
+import yangwuxian from '../assets/caseThumb/yangwuxianlogo.png'
+import yangwuxianMain from '../assets/caseMain/yangwuxian/yangwuxianMain.png'
+import yangwuxianB from '../assets/caseMain/yangwuxian/yangwuxian.png'
+
 var homeContent = [
   {
     id: '1',
@@ -126,6 +138,36 @@ var homeContent = [
     type: 2
   },
   {
+    id: '10',
+    name: '恒寿堂',
+    color: '#92D192',
+    url: hengshoutang,
+    bcImg: hengshoutangMain,
+    logoB: hengshoutangB,
+    desc: '2019 - vis视觉识别系统',
+    type: 1
+  },
+  {
+    id: '11',
+    name: '卡杰诗',
+    color: '#333333',
+    url: kajieshi,
+    bcImg: kajieshiMain,
+    logoB: kajieshiB,
+    desc: '2019 - vis视觉识别系统',
+    type: 1
+  },
+  {
+    id: '12',
+    name: '养无限',
+    color: '#F2CB35',
+    url: yangwuxian,
+    bcImg: yangwuxianMain,
+    logoB: yangwuxianB,
+    desc: '2019 - vis视觉识别系统',
+    type: 1
+  },
+  {
     id: '1',
     name: '蒙牛',
     color: '#00AA0F',
@@ -214,6 +256,36 @@ var homeContent = [
     logoB: shimaoB,
     desc: '2019 - vis视觉识别系统',
     type: 2
+  },
+  {
+    id: '10',
+    name: '恒寿堂',
+    color: '#92D192',
+    url: hengshoutang,
+    bcImg: hengshoutangMain,
+    logoB: hengshoutangB,
+    desc: '2019 - vis视觉识别系统',
+    type: 1
+  },
+  {
+    id: '11',
+    name: '卡杰诗',
+    color: '#333333',
+    url: kajieshi,
+    bcImg: kajieshiMain,
+    logoB: kajieshiB,
+    desc: '2019 - vis视觉识别系统',
+    type: 1
+  },
+  {
+    id: '12',
+    name: '养无限',
+    color: '#F2CB35',
+    url: yangwuxian,
+    bcImg: yangwuxianMain,
+    logoB: yangwuxianB,
+    desc: '2019 - vis视觉识别系统',
+    type: 1
   }
 ]
 

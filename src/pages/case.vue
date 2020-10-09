@@ -298,59 +298,112 @@ export default {
       this.currentIndex = (casenum-1).toString()
       this.currentIndexch = this.currentIndex
 
-      var scrollWidth = this.thumbArray.length*100 + this.screenWidth - 100 + 'px'
-      console.log(scrollWidth)
-      this.$refs.scrollDiv2.style.width = scrollWidth
+      if(this.screenWidth<1920){
+        var scrollWidth = this.thumbArray.length*100 + this.screenWidth - 100 + 'px'
+        console.log(scrollWidth)
+        this.$refs.scrollDiv2.style.width = scrollWidth
 
-      var initLength = -(this.caseId-1)*100 + 'px'
-      this.thumbStyle = {
-        transition: '0.5s all ease',
-        transform: "translate(" + initLength + ", 0)"
+        var initLength = -(this.caseId-1)*100 + 'px'
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + initLength + ", 0)"
+        }
+      }else{
+        var scrollWidth = this.thumbArray.length*200 + this.screenWidth - 200 + 'px'
+        console.log(scrollWidth)
+        this.$refs.scrollDiv2.style.width = scrollWidth
+
+        var initLength = -(this.caseId-1)*200 + 'px'
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + initLength + ", 0)"
+        }
       }
+
     })
   },
   methods: {
     gotoLast(){
       this.scrollToTop()
-      if(this.currentIndex == 0){
-        this.currentIndex = 8
-        this.$router.push({
-          path: `/case/9`
-        })
-        this.currentIndexch = 8
-        //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
-        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
-        this.thumbStyle = {
-          transition: '0.5s all ease',
-          transform: "translate(" + moveDistance + ", 0)"
+      if(this.screenWidth<1920){
+        if(this.currentIndex == 0){
+          this.currentIndex = 11
+          this.$router.push({
+            path: `/case/9`
+          })
+          this.currentIndexch = 11
+          //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+          this.thumbStyle = {
+            transition: '0.5s all ease',
+            transform: "translate(" + moveDistance + ", 0)"
+          }
+          console.log(this.currentIndex)
+        }else{
+          this.currentIndex --
+          this.$router.push({
+            path: `/case/${this.thumbArray[this.currentIndex].id}`
+          })
+          this.currentIndexch = this.currentIndex
+          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+          this.thumbStyle = {
+            transition: '0.5s all ease',
+            transform: "translate(" + moveDistance + ", 0)"
+          }
+          console.log(this.currentIndex)
         }
-        console.log(this.currentIndex)
       }else{
-        this.currentIndex --
-        this.$router.push({
-          path: `/case/${this.thumbArray[this.currentIndex].id}`
-        })
-        this.currentIndexch = this.currentIndex
-        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
-        this.thumbStyle = {
-          transition: '0.5s all ease',
-          transform: "translate(" + moveDistance + ", 0)"
+        if(this.currentIndex == 0){
+          this.currentIndex = 11
+          this.$router.push({
+            path: `/case/9`
+          })
+          this.currentIndexch = 11
+          //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
+          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+          this.thumbStyle = {
+            transition: '0.5s all ease',
+            transform: "translate(" + moveDistance + ", 0)"
+          }
+          console.log(this.currentIndex)
+        }else{
+          this.currentIndex --
+          this.$router.push({
+            path: `/case/${this.thumbArray[this.currentIndex].id}`
+          })
+          this.currentIndexch = this.currentIndex
+          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+          this.thumbStyle = {
+            transition: '0.5s all ease',
+            transform: "translate(" + moveDistance + ", 0)"
+          }
+          console.log(this.currentIndex)
         }
-        console.log(this.currentIndex)
       }
+
+
+
     },
     gotoNext(){
       this.scrollToTop()
-      if(this.currentIndex == 8){
+      if(this.currentIndex == 11){
         this.currentIndex = 0
         this.$router.push({
           path: `/case/1`
         })
         this.currentIndexch = 0
         var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+
+        if(this.screenWidth<1920){
+          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+        }else {
+          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+        }
+
         //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
         this.thumbStyle = {
           transition: '0.5s all ease',
@@ -364,7 +417,13 @@ export default {
         })
         this.currentIndexch = this.currentIndex
         var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-        var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+
+        if(this.screenWidth<1920){
+          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+        }else{
+          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+        }
+
         this.thumbStyle = {
           transition: '0.5s all ease',
           transform: "translate(" + moveDistance + ", 0)"
@@ -396,37 +455,75 @@ export default {
       let timer = null
       var once = false
 
-      timer = setTimeout(()=>{
-        n2 = this.$refs.scrollDiv2.getBoundingClientRect().left
-        if(n1 == n2){
-          if(n1%100 >= -50){
-            type = 1
-          }else if(n1%100 <-50){
-            type = 2
-          }
-          if(type ==1){
-              var controlLength = parseInt(ml/100)*100-n1 + 'px'
+      if(this.screenWidth<1920){
+        timer = setTimeout(()=>{
+          n2 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          if(n1 == n2){
+            if(n1%100 >= -50){
+              type = 1
+            }else if(n1%100 <-50){
+              type = 2
+            }
+            if(type ==1){
+                var controlLength = parseInt(ml/100)*100-n1 + 'px'
+                this.thumbStyle = {
+                  transition: '0.5s all ease',
+                  transform: "translate(" + controlLength + ", 0)"
+                }
+                console.log(parseInt(ml/100))
+                this.currentIndexch = -(parseInt(ml/100))
+            }else if (type == 2) {
+              var controlLength = (parseInt(ml/100)-1)*100-n1 + 'px'
               this.thumbStyle = {
                 transition: '0.5s all ease',
                 transform: "translate(" + controlLength + ", 0)"
               }
-              console.log(parseInt(ml/100))
-              this.currentIndexch = -(parseInt(ml/100))
-          }else if (type == 2) {
-            var controlLength = (parseInt(ml/100)-1)*100-n1 + 'px'
-            this.thumbStyle = {
-              transition: '0.5s all ease',
-              transform: "translate(" + controlLength + ", 0)"
+              console.log(-parseInt(ml/100))
+              this.currentIndexch = -(parseInt(ml/100)-1)
             }
-            console.log(-parseInt(ml/100))
-            this.currentIndexch = -(parseInt(ml/100)-1)
           }
-        }
-      },70)
+        },70)
+      }else{
+        timer = setTimeout(()=>{
+          n2 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          if(n1 == n2){
+            if(n1%200 >= -100){
+              type = 1
+            }else if(n1%200 <-100){
+              type = 2
+            }
+            if(type ==1){
+                var controlLength = parseInt(ml/200)*200-n1 + 'px'
+                this.thumbStyle = {
+                  transition: '0.5s all ease',
+                  transform: "translate(" + controlLength + ", 0)"
+                }
+                console.log(parseInt(ml/200))
+                this.currentIndexch = -(parseInt(ml/200))
+            }else if (type == 2) {
+              var controlLength = (parseInt(ml/200)-1)*200-n1 + 'px'
+              this.thumbStyle = {
+                transition: '0.5s all ease',
+                transform: "translate(" + controlLength + ", 0)"
+              }
+              console.log(-parseInt(ml/200))
+              this.currentIndexch = -(parseInt(ml/200)-1)
+            }
+          }
+        },70)
+      }
+
     },
     clickThumb(index){
       var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-      var moveDistance = (0-index)*100-n1 + 'px'
+
+      if(this.screenWidth<1920){
+        var moveDistance = (0-index)*100-n1 + 'px'
+      }else{
+        var moveDistance = (0-index)*200-n1 + 'px'
+      }
+
+
       this.currentIndexch = index
       console.log(index)
       this.thumbStyle = {
@@ -437,7 +534,8 @@ export default {
     handleScroll(){
       //console.log('dsads')
       this.bottomHeight = this.$refs.bottomDiv.getBoundingClientRect().top
-      if(this.bottomHeight <=750){
+      //if(this.bottomHeight <=750){
+      if(this.bottomHeight <=1200){
         this.$refs.fixButtonCon.style.display = 'none'
       }else{
         this.$refs.fixButtonCon.style.display = 'flex'
@@ -451,7 +549,8 @@ export default {
       }else{
         this.$refs.scrollTopBtn.style.opacity = '0.3'
       }
-      if(this.scrollHeight > 600 && this.bottomHeight > 750){
+      if(this.scrollHeight > 600 && this.bottomHeight > 1200){
+      //if(this.scrollHeight > 600 && this.bottomHeight > 750){
         this.$refs.scrollTopBtn.style.opacity = '0.3'
       }else{
         this.$refs.scrollTopBtn.style.opacity = '0'

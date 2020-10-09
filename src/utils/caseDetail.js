@@ -105,6 +105,52 @@ import shimao8 from '../assets/caseDetail/shimao/8.jpg'
 import shimao9 from '../assets/caseDetail/shimao/9.jpg'
 import shimao10 from '../assets/caseDetail/shimao/10.jpg'
 
+//hengshoutang
+import hengshoutang from '../assets/caseMain/hengshoutang/hengshoutang.png'
+import hengshoutangW from '../assets/caseMain/hengshoutang/hengshoutang3.png'
+import hengshoutang1 from '../assets/caseDetail/hengshoutang/1.jpg'
+import hengshoutang2 from '../assets/caseDetail/hengshoutang/2.jpg'
+import hengshoutang3 from '../assets/caseDetail/hengshoutang/3.jpg'
+import hengshoutang4 from '../assets/caseDetail/hengshoutang/4.jpg'
+import hengshoutang5 from '../assets/caseDetail/hengshoutang/5.jpg'
+import hengshoutang6 from '../assets/caseDetail/hengshoutang/6.jpg'
+import hengshoutang7 from '../assets/caseDetail/hengshoutang/7.jpg'
+import hengshoutang8 from '../assets/caseDetail/hengshoutang/8.jpg'
+import hengshoutang9 from '../assets/caseDetail/hengshoutang/9.jpg'
+import hengshoutang10 from '../assets/caseDetail/hengshoutang/10.jpg'
+import hengshoutang11 from '../assets/caseDetail/hengshoutang/11.jpg'
+import hengshoutang12 from '../assets/caseDetail/hengshoutang/12.jpg'
+import hengshoutang13 from '../assets/caseDetail/hengshoutang/13.jpg'
+import hengshoutang14 from '../assets/caseDetail/hengshoutang/14.jpg'
+import hengshoutang15 from '../assets/caseDetail/hengshoutang/15.jpg'
+import hengshoutang16 from '../assets/caseDetail/hengshoutang/16.jpg'
+
+//kajieshi
+import kajieshi from '../assets/caseMain/kajieshi/kajieshi.png'
+import kajieshiW from '../assets/caseMain/kajieshi/kajieshi3.png'
+import kajieshi1 from '../assets/caseDetail/kajieshi/1.jpg'
+import kajieshi2 from '../assets/caseDetail/kajieshi/2.jpg'
+import kajieshi3 from '../assets/caseDetail/kajieshi/3.jpg'
+import kajieshi4 from '../assets/caseDetail/kajieshi/4.jpg'
+import kajieshi5 from '../assets/caseDetail/kajieshi/5.jpg'
+import kajieshi6 from '../assets/caseDetail/kajieshi/6.jpg'
+
+//yangwuxian
+import yangwuxian from '../assets/caseMain/yangwuxian/yangwuxian.png'
+import yangwuxianW from '../assets/caseMain/yangwuxian/yangwuxian3.png'
+import yangwuxian1 from '../assets/caseDetail/yangwuxian/1.jpg'
+import yangwuxian2 from '../assets/caseDetail/yangwuxian/2.jpg'
+import yangwuxian3 from '../assets/caseDetail/yangwuxian/3.jpg'
+import yangwuxian4 from '../assets/caseDetail/yangwuxian/4.jpg'
+import yangwuxian5 from '../assets/caseDetail/yangwuxian/5.jpg'
+import yangwuxian6 from '../assets/caseDetail/yangwuxian/6.jpg'
+import yangwuxian7 from '../assets/caseDetail/yangwuxian/7.jpg'
+import yangwuxian8 from '../assets/caseDetail/yangwuxian/8.jpg'
+import yangwuxian9 from '../assets/caseDetail/yangwuxian/9.jpg'
+import yangwuxian10 from '../assets/caseDetail/yangwuxian/10.jpg'
+import yangwuxian11 from '../assets/caseDetail/yangwuxian/11.jpg'
+
+
 var caseDetail = [
   {
     id: '01',
@@ -599,7 +645,199 @@ var caseDetail = [
         srcList: [shimao10]
       }
     ]
-  }
+  },
+  {
+    id: '10',
+    color: '#92D192',
+    logo: hengshoutang,
+    type: 1,
+    logoW: hengshoutangW,
+    descm: '2017 - vis视觉识别系统',
+    mod: 1,
+    name: '恒寿堂',
+    desc: '恒寿堂创立于1997年，传承中华千年天地人合一的养生文化，正心正念创造产品与服务。致力于让每个人都遵循颐养指导，身体健康、内心充满爱与喜悦。品牌发展战略：为每一个有养生需求的用户，定制专属自己的养生产品。',
+    cover: {src: hengshoutang1,srcList:[hengshoutang1]},
+    image:[
+      {
+        id: '2',
+        src: hengshoutang2,
+        srcList: [hengshoutang2]
+      },
+      {
+        id: '3',
+        src: hengshoutang3,
+        srcList: [hengshoutang3]
+      },
+      {
+        id: '4',
+        src: hengshoutang4,
+        srcList: [hengshoutang4]
+      },
+      {
+        id: '5',
+        src: hengshoutang5,
+        srcList: [hengshoutang5]
+      },
+      {
+        id: '6',
+        src: hengshoutang6,
+        srcList: [hengshoutang6]
+      },
+      {
+        id: '7',
+        src: hengshoutang7,
+        srcList: [hengshoutang7]
+      },
+      {
+        id: '8',
+        src: hengshoutang8,
+        srcList: [hengshoutang8]
+      },
+      {
+        id: '9',
+        src: hengshoutang9,
+        srcList: [hengshoutang9]
+      },
+      {
+        id: '10',
+        src: hengshoutang10,
+        srcList: [hengshoutang10]
+      },
+      {
+        id: '11',
+        src: hengshoutang11,
+        srcList: [hengshoutang11]
+      },
+      {
+        id: '12',
+        src: hengshoutang12,
+        srcList: [hengshoutang12]
+      },
+      {
+        id: '13',
+        src: hengshoutang13,
+        srcList: [hengshoutang13]
+      },
+      {
+        id: '14',
+        src: hengshoutang14,
+        srcList: [hengshoutang14]
+      },
+      {
+        id: '15',
+        src: hengshoutang15,
+        srcList: [hengshoutang15]
+      },
+      {
+        id: '16',
+        src: hengshoutang16,
+        srcList: [hengshoutang16]
+      }
+    ]
+  },
+  {
+    id: '11',
+    color: '#333333',
+    logo: kajieshi,
+    type: 1,
+    logoW: kajieshiW,
+    descm: '2017 - vis视觉识别系统',
+    mod: 1,
+    name: '卡杰诗',
+    desc: '上海杰诗科技有限公司旗下品牌，始于 2005 年。\n公司总部位于中国上海，是一家国际化健康家居企业。公司在东南亚、澳洲、北美、日韩等地区均设有分公司。公司集大中小型健康智能生活电器的研发、设计、生产、销售为一体，致力为千万现代家庭提供更完整的生活健康解决方案。',
+    cover: {src: kajieshi1,srcList:[kajieshi1]},
+    image:[
+      {
+        id: '2',
+        src: kajieshi2,
+        srcList: [kajieshi2]
+      },
+      {
+        id: '3',
+        src: kajieshi3,
+        srcList: [kajieshi3]
+      },
+      {
+        id: '4',
+        src: kajieshi4,
+        srcList: [kajieshi4]
+      },
+      {
+        id: '5',
+        src: kajieshi5,
+        srcList: [kajieshi5]
+      },
+      {
+        id: '6',
+        src: kajieshi6,
+        srcList: [kajieshi6]
+      }
+    ]
+  },
+  {
+    id: '12',
+    color: '#F2CB35',
+    logo: yangwuxian,
+    type: 1,
+    logoW: yangwuxianW,
+    descm: '2017 - vis视觉识别系统',
+    mod: 1,
+    name: '养无限',
+    desc: '养无限（上海）生物科技有限公司于2018年11月15日成立。\n养无限是革新性的健康咨询平台。多类别健康专家为你提供问诊服务，个性化健康方案，后续贴心跟踪服务，助你拥有健康的身体，激发生命活力。你可以咨询有关健康的一切，或注册为健康专家，开启您的获取经验之旅。',
+    cover: {src: yangwuxian1,srcList:[yangwuxian1]},
+    image:[
+      {
+        id: '2',
+        src: yangwuxian2,
+        srcList: [yangwuxian2]
+      },
+      {
+        id: '3',
+        src: yangwuxian3,
+        srcList: [yangwuxian3]
+      },
+      {
+        id: '4',
+        src: yangwuxian4,
+        srcList: [yangwuxian4]
+      },
+      {
+        id: '5',
+        src: yangwuxian5,
+        srcList: [yangwuxian5]
+      },
+      {
+        id: '6',
+        src: yangwuxian6,
+        srcList: [yangwuxian6]
+      },
+      {
+        id: '7',
+        src: yangwuxian7,
+        srcList: [yangwuxian7]
+      },
+      {
+        id: '8',
+        src: yangwuxian8,
+        srcList: [yangwuxian8]
+      },
+      {
+        id: '9',
+        src: yangwuxian9,
+        srcList: [yangwuxian9]
+      },
+      {
+        id: '10',
+        src: yangwuxian10,
+        srcList: [yangwuxian10]
+      },
+      {
+        id: '11',
+        src: yangwuxian11,
+        srcList: [yangwuxian11]
+      }
+    ]
+  },
 ]
 
 export default caseDetail

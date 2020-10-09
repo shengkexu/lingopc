@@ -329,10 +329,15 @@ body{
 .thumbConRe{
   position: relative;
 }
+::-webkit-scrollbar {
+  display: none; /*chrome safari*/
+}
 
 .thumbCon{
   /* position: absolute; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  scrollbar-width: none; /*Firefox*/
+  -ms-overflow-style: none; /*ie*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -390,6 +395,12 @@ body{
   width: 100px;
   height: 50px;
 }
+.wheelCon p{
+  margin-bottom: 20px;
+  font-family: oppoFontR;
+  color: #333333;
+  font-size: 14px;
+}
 
 /* .gifImg{
   width: 100%;
@@ -446,7 +457,15 @@ body{
   height: auto;
   clear: right;
 }
-.caseDesc{
+.caseDesc1{
+  margin-bottom: 8px;
+  margin-left: 12px;
+  float: left;
+  font-size: 8px;
+  color: #AAAAAA;
+  font-family: lackFontR;
+}
+.caseDesc2{
   margin-bottom: 8px;
   margin-left: 12px;
   float: left;
@@ -889,7 +908,7 @@ body{
 
 
 /* 自适应 */
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1920px){
   .blueCircleScale{
     transform: scale(30);
   }
@@ -905,12 +924,25 @@ body{
 
 
 
-
+  .logo{
+    position: absolute;
+    left: 80px;
+    top: 55px;
+    width: 174px;
+    height: auto;
+  }
+  .mainLogo{
+    width: 174px;
+    height: 80px;
+  }
   .caseTitleCon{
     position: absolute;
     left: 75%;
     top: 45%;
     text-align: left;
+  }
+  .caseLogo{
+    width: 80px;
   }
   .caseConUpCon3B{
     margin-top: 20px;
@@ -922,15 +954,61 @@ body{
     font-family: aliFontM;
     color: #333333;
   }
-  .caseDesc{
+  .caseDesc1{
+    display: none;
+  }
+  .caseDesc2{
     margin-top: 34px;
     /* margin-bottom: 8px; */
     margin-left: 0px;
     font-size: 13px;
     float: none;
+    /* display: none; */
   }
   .thumbTitle{
     margin-top: 30px;
     font-size: 16px;
+  }
+
+
+  .bigShowCon{
+    /* width: 100vw; */
+    margin-top: 180px;
+    min-height: 750px;
+    /* background: red; */
+  }
+  .test1{
+    width: 330px;
+    height: 494px;
+  }
+  .caseImg{
+    width: 550px;
+    height: 680px;
+    margin-left: -275px;
+    margin-top: -340px;
+  }
+  .imgBack{
+    width: 420px;
+    height: 600px;
+  }
+
+
+
+  .thumbImg{
+    width: 200px;
+    height: 100px;
+    margin-top: 18px;
+  }
+  .thumbCon{
+    height: 180px;
+  }
+  .thumbLine{
+    width: 2px;
+    height: 30px;
+  }
+  .thumbLine2{
+    width: 2px;
+    height: 30px;
+    margin-top: 150px;
   }
 }

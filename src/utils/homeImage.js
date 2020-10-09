@@ -13,6 +13,7 @@ import mengniuW from '../assets/caseMain/mengniu/mengniu3.png'
 import cixi from '../assets/caseThumb/cixilogo.png'
 import cixiMain from '../assets/caseMain/cixi/cixiMain.png'
 import cixiB from '../assets/caseMain/cixi/cixi.png'
+import cixiW from '../assets/caseMain/cixi/cixi3.png'
 
 import silk from '../assets/caseThumb/silklogo.png'
 import silkMain from '../assets/caseMain/silk/silkMain.png'
@@ -44,16 +45,35 @@ import shimaoMain from '../assets/caseMain/shimao/shimaoMain.png'
 import shimaoB from '../assets/caseMain/shimao/shimao.png'
 import shimaoW from '../assets/caseMain/shimao/shimao3.png'
 
+import hengshoutang from '../assets/caseThumb/hengshoutanglogo.png'
+import hengshoutangMain from '../assets/caseMain/hengshoutang/hengshoutangMain.png'
+import hengshoutangB from '../assets/caseMain/hengshoutang/hengshoutang.png'
+import hengshoutangW from '../assets/caseMain/hengshoutang/hengshoutang3.png'
+
+import kajieshi from '../assets/caseThumb/kajieshilogo.png'
+import kajieshiMain from '../assets/caseMain/kajieshi/kajieshiMain.png'
+import kajieshiB from '../assets/caseMain/kajieshi/kajieshi.png'
+import kajieshiW from '../assets/caseMain/kajieshi/kajieshi3.png'
+
+import yangwuxian from '../assets/caseThumb/yangwuxianlogo.png'
+import yangwuxianMain from '../assets/caseMain/yangwuxian/yangwuxianMain.png'
+import yangwuxianB from '../assets/caseMain/yangwuxian/yangwuxian.png'
+import yangwuxianW from '../assets/caseMain/yangwuxian/yangwuxian3.png'
+
+
 var imageArray = [
   xibei,xibeiMain,xibeiB,xibeiW,
   mengniu,mengniuMain,mengniuB,mengniuW,
   zhixin,zhixinMain,zhixinB,zhixinW,
   silk,silkMain,silkB,silkW,
   vanke,vankeMain,vankeB,vankeW,
-  cixi,cixiMain,cixiB,
+  cixi,cixiMain,cixiB,cixiW,
   zhongnan,zhongnanMain,zhongnanB,zhongnanW,
   xinyuan,xinyuanMain,xinyuanB,xinyuanW,
-  shimao,shimaoMain,shimaoB,shimaoW
+  shimao,shimaoMain,shimaoB,shimaoW,
+  hengshoutang,hengshoutangMain,hengshoutangB,hengshoutangW,
+  kajieshi,kajieshiMain,kajieshiB,kajieshiW,
+  yangwuxian,yangwuxianMain,yangwuxianB,yangwuxianW
 ]
 
 export default imageArray
