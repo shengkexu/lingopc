@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import './style/reset.css'
 import './style/main.css'
+import './style/contact.css'
 import './style/elementChange.css'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';

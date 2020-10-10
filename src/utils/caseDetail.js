@@ -224,7 +224,7 @@ var caseDetail = [
     descm: '2017 - vis视觉识别系统',
     mod: 1,
     name: '粢喜',
-    desc: 'dsdasd',
+    desc: '粢喜Ricepie是专注于精致化的中式手作饭团；核心强调“快食+健康+精致”的就餐理念,越来越多的年轻上班族在饮食方式上逐渐奉行“简餐主义”，粢喜主打的“饭团”分量不多但精致可口,简易、不用花太多时间就能吃饱且内馅可任性搭配,同时坚持食物的高品质保证食物可口，致力于打造成为中国版的“wagas“！',
     cover: {src: xibei1,srcList:[xibei1]},
     image:[
       {
@@ -535,7 +535,7 @@ var caseDetail = [
     descm: '2019 - vis视觉识别系统',
     mod: 1,
     name: '鑫沅资产',
-    desc: 'dsdasd',
+    desc: '鑫沅资产管理有限公司设立于上海，是鑫元基金管理有限公司的控股子公司，是南京银行金融版图的重要成员。鑫沅资产秉承“稳健进取”的经营理念，践行“责任金融”的使命，旨在成为同业机构的资产管理”好伙伴”。',
     cover: {src: xinyuan1,srcList:[xinyuan1]},
     image:[
       {

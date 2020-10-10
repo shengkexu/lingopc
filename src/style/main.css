@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'iconfont';  /* project id 2081736 */
-  src: url('//at.alicdn.com/t/font_2081736_iergbp89qq.eot');
-  src: url('//at.alicdn.com/t/font_2081736_iergbp89qq.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2081736_iergbp89qq.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2081736_iergbp89qq.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2081736_iergbp89qq.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2081736_iergbp89qq.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_2081736_rhdndv1afon.eot');
+  src: url('//at.alicdn.com/t/font_2081736_rhdndv1afon.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2081736_rhdndv1afon.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2081736_rhdndv1afon.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2081736_rhdndv1afon.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2081736_rhdndv1afon.svg#iconfont') format('svg');
 }
 
 .iconfont{
@@ -34,6 +34,11 @@
 @font-face{
   font-family: 'oppoFontR';
   src: url('../assets/fonts/OPPOSans-R.ttf')
+}
+
+@font-face{
+  font-family: 'oppoFontM';
+  src: url('../assets/fonts/OPPOSans-M.ttf')
 }
 
 
@@ -177,7 +182,7 @@ body{
   opacity: 0; */
   top: -100vh;
   position: absolute;
-  z-index: 11;
+  z-index: 1100;
   width: 100vw;
   height: 100vh;
   /* padding-top: 120px; */

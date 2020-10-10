@@ -34,7 +34,7 @@
 
 
       <div class="thumbConRe">
-        <div class="wheelCon">
+        <div class="wheelCon" v-if="screenWidth>1024">
           <p><i class="iconfont">&#xe65b;</i>请滑动鼠标</p>
         </div>
         <div class="thumbCon" v-if="thumbArray.length !== 0"  @scroll="onScroll()">

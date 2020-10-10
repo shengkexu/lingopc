@@ -17,7 +17,7 @@
           <ul>
               <router-link to="/home"><a><li class="menuWord menuWord1" :class="{'menuWordChange1': isActive}">首页</li></a></router-link>
               <a href="#"><li class="menuWord menuWord2" :class="{'menuWordChange2': isActive}">关于</li></a>
-              <a href="#"><li class="menuWord menuWord3" :class="{'menuWordChange3': isActive}">联系</li></a>
+              <router-link to="/contact"><a><li class="menuWord menuWord3" :class="{'menuWordChange3': isActive}">联系</li></a></router-link>
               <!-- <a href="#"><li class="menuWord menuWord4" :class="{'menuWordChange4': isActive}">联系我们</li></a> -->
           </ul>
           <div class="menuImgCon">
