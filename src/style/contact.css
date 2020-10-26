@@ -5,6 +5,7 @@
   height: 100vh;
   background: #F9F9F9;
   padding: 0 16px 16px 16px;
+  margin-top: 0;
 }
 
 .contactInfoCon{
@@ -12,10 +13,10 @@
   box-sizing: border-box;
   padding: 14px;
   background: #fff;
-  width: 190px;
-  height: 158px;
+  width: 213px;
+  height: 168px;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 35px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
   /* margin-left: 16px; */
 }
@@ -28,14 +29,14 @@
   margin-top: 7px;
 }
 .contactWordCon p{
-  font-size: 8px;
+  font-size: 10px;
   line-height: 16px;
   font-family: oppoFontM;
   color: #333333;
   font-weight: normal;
 }
 .contactLine{
-  margin-top: 12px;
+  margin-top: 10px;
   width: 23px;
   height: 1px;
   background: #FC4719;
@@ -47,21 +48,21 @@
   margin-top: 10px;
 }
 .ConTitle{
-  font-size: 9px;
-  color: #333333;
-  font-family: oppoFontM;
+  font-size: 10px;
+  color: #AAA;
+  font-family: lackFontR;
   font-weight: 400;
 }
 .ConContent{
   margin-top: 4px;
-  font-size: 7px;
-  font-family: lackFontR;
-  color: #AAAAAA;
+  font-size: 10px;
+  font-family: aliFontM;
+  color: #333;
 }
 .contactBackImg{
   position: absolute;
-  top: 84px;
-  left: 121px;
+  top: 94px;
+  left: 140px;
 }
 .contactBackImg img{
   width: 53px;
@@ -76,6 +77,41 @@
   height: 60%;
   background: #FFFFFF;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.manImg{
+  left: 76%;
+  top: -75px;
+  width: 50px;
+  height: 83px;
+  position: absolute;
+}
+.handImg{
+  width: 13px;
+  height: 46px;
+  position: absolute;
+  left: 76%;
+  top: -45px;
+  margin-left: 2px;
+}
+.bubbleImg{
+  width: 133.5px;
+  height: 80px;
+  position: absolute;
+  top: -160px;
+  left: 76%;
+  margin-left: -40px;
+}
+
+.bubbleText{
+  position: absolute;
+  font-size: 12px;
+  font-family: lackFontR;
+  color: #333333;
+  top: -130px;
+  left: 76%;
+  margin-left: -10px;
 }
 
 .formTitleCon{
@@ -122,7 +158,7 @@
   flex-direction: column;
   justify-content: space-between;
   /* background: red; */
-  height: 90%;
+  height: 95%;
 }
 
 .formContent{
@@ -130,23 +166,31 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80%;
+  height: 94%;
+  /* background: red; */
 }
 
-input, textarea{
+input{
   outline: none;
   box-sizing: border-box;
   padding-top: 15px;
-  font-size: 8px;
+  font-size: 10px;
+  font-family: aliFontM;
 }
-
+textarea{
+  outline: none;
+  box-sizing: border-box;
+  padding-top: 0px;
+  font-size: 10px;
+  font-family: aliFontM;
+}
 
 .nameCon{
   position: relative;
 }
 .nameForm{
   width: 100%;
-  height: 30px;
+  height: 40px;
   padding-left: 12px;
   border: none;
   background: #F1F6FA;
@@ -156,47 +200,37 @@ input, textarea{
 .nameLable{
   position: absolute;
   color: #333333;
-  font-size: 10px;
+  font-size: 12px;
   font-family: aliFontM;
-  top: 10px;
+  top: 15px;
   left: 12px;
   transition: 0.3s all ease;
 }
 
-
 .nameLableChange{
   position: absolute;
-  font-size: 7px;
+  font-size: 10px;
   color: #999999;
   font-family: aliFontR;
-  top: 4px;
+  top: 8px;
   left: 12px;
 }
-
-/* .nameForm:focus ~ .nameLable{
-  position: absolute;
-  font-size: 7px;
-  color: #999999;
-  font-family: aliFontR;
-  top: 4px;
-  left: 12px;
-} */
 
 .formInCircle{
   position: absolute;
   right: 12px;
-  top: 10px;
+  top: 16px;
 }
 .formInIcon{
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 15px;
   font-size: 12px;
 }
 .formInIconE{
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 15px;
   font-size: 12px;
   color: #D5000B;
 }
@@ -206,17 +240,22 @@ input, textarea{
   font-family: aliFontM;
   position: absolute;
   right: 30px;
-  top: 12px;
+  top: 17px;
 }
 
 .budgetCon{
+  margin-top: 5px;
   position: relative;
+}
+.budgetCon span{
+  font-size: 8px;
+  color: #AAA;
 }
 .budgetCon p{
   margin-left: 12px;
   float: left;
   font-family: aliFontM;
-  font-size: 10px;
+  font-size: 12px;
   color: #333333;
 }
 
@@ -239,42 +278,76 @@ input, textarea{
 
 .textCon{
   position: relative;
+  background: #F1F6FA;
+  /* background: yellow; */
+  padding-bottom: 8px;
+  padding-top: 18px;
 }
 .textArea{
   width: 100%;
   height: 50px;
   padding-left: 12px;
+  padding-right: 12px;
   border: none;
   background: #F1F6FA;
+  /* padding-bottom: 8px; */
+  margin-top: 4px;
 }
 .nameLable2{
   position: absolute;
   color: #333333;
-  font-size: 10px;
+  font-size: 12px;
   font-family: aliFontM;
-  top: 10px;
+  /* margin-left: 12px; */
+  top: 6px;
   left: 12px;
   transition: 0.3s all ease;
+  /* background: red; */
 }
-/* .textArea:focus ~ .nameLable2{
-  font-size: 7px;
-  color: #999999;
-  font-family: aliFontR;
-  top: 4px;
-  left: 12px;
-} */
 
 .nameLableChange2{
   position: absolute;
-  font-size: 7px;
+  font-size: 10px;
   color: #999999;
   font-family: aliFontR;
-  top: 4px;
+  top: 6px;
   left: 12px;
 }
 
 
-.submitButton{
+/* textarea的单独样式 */
+.formInCircleT{
+  position: absolute;
+  right: 12px;
+  top: 8px;
+}
+.formInIconT{
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  font-size: 12px;
+}
+.formInIconET{
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  font-size: 12px;
+  color: #D5000B;
+}
+.formInParaT{
+  font-size: 8px;
+  color: #D5000B;
+  font-family: aliFontM;
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+
+
+
+.submitBtn{
+  margin-top: 10px;
+  background: white;
   width: 107px;
   height: 29px;
   font-size: 11px;
@@ -284,4 +357,296 @@ input, textarea{
   line-height: 29px;
   margin-left: 50%;
   transform: translate(-53.5px, 0);
+}
+
+
+@media screen and (min-width: 1920px) {
+  .contact{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+  }
+  .contactBigConR{
+    margin-left: 3vw;
+    margin-top: 20vh;
+    width: 27vw;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+    /* background: red; */
+    position: relative;
+  }
+  .manConB{
+    /* background: green;
+    height: 150px; */
+    /* margin-top: -500px; */
+  }
+  .bubbleImgB{
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    margin-left: -133.5px;
+    width: 267px;
+    height: 120px;
+    z-index: 2;
+  }
+  .bubbleTextB{
+    font-size: 24px;
+    font-family: lackFontR;
+    font-weight: 400;
+    color: #333;
+    position: absolute;
+    top: calc(46px + 5vh);
+    left: 50%;
+    margin-left: -74px;
+    z-index: 2;
+  }
+  .manImgB{
+    position: absolute;
+    width: 143px;
+    height: auto;
+    top: calc(130px + 5vh);
+    left: 50%;
+    margin-left: -71.5px;
+    z-index: 2;
+  }
+  .handImgB{
+    position: absolute;
+    width: calc(13px * 143 / 50);
+    top: calc(210px + 5vh);
+    left: 50%;
+    margin-left: -70px;
+    z-index: 2;
+  }
+  .contactInfoCon{
+    position: absolute;
+    width: 100%;
+    height: 420px;
+    z-index: 1;
+    top: calc(320px + 5vh);
+    padding: 40px 50px;
+  }
+  .contactLogo{
+    width: 121px;
+    height: auto;
+  }
+  .contactWordCon{
+    margin-top: 16px;
+  }
+  .contactWordCon p{
+    font-size: 19px;
+    line-height: 40px;
+  }
+  .contactLine{
+    width: 60px;
+    height: 4px;
+  }
+  .emailCon, .teleCon{
+    margin-top: 32px;
+  }
+  .ConTitle, .ConContent{
+    font-size: 18px;
+  }
+  .ConContent{
+    margin-top: 16px;
+  }
+  .contactBackImg{
+    position: absolute;
+    top: 220px;
+    left: 60%;
+  }
+  .contactBackImg img{
+    width: 120px;
+    height: auto;
+    opacity: 0.1;
+  }
+
+
+  .contactForm{
+    box-sizing: border-box;
+    height: 80vh;
+    margin-top: 20vh;
+    width: 70vw;
+    padding: 40px 80px 0px 80px;
+  }
+  .formTitleCon{
+    /* margin-top: 40px  */
+  }
+  .formTitle{
+    font-size: 30px;
+  }
+  .tipCon p{
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 12px;
+  }
+  .orangeCircle{
+    margin-top: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  .greenCircle{
+    margin-top: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  input,textarea{
+    font-size: 14px;
+  }
+  input{
+    padding-top: 30px;
+  }
+  textarea{
+    padding-top: 40px;
+  }
+  .nameForm{
+    height: 80px;
+    padding-left: 24px;
+  }
+  .nameLable{
+    top: 30px;
+    left: 24px;
+    font-size: 18px;
+  }
+  .nameLableChange{
+    top: 16px;
+    left: 24px;
+    font-size: 14px;
+  }
+  .formInCircle{
+    right: 24px;
+    top: 32px;
+  }
+  .formInIcon{
+    right: 24px;
+    top: 30px;
+    font-size: 16px;
+  }
+  .formInIconE{
+    right: 24px;
+    top: 30px;
+    font-size: 16px;
+  }
+  .formInPara{
+    font-size: 14px;
+    top: 32px;
+    right: 60px;
+  }
+  .budgetCon p{
+    font-size: 18px;
+  }
+  .budgetCon span{
+    font-size: 12px;
+  }
+  .sliderCircle{
+    margin-right: 24px;
+  }
+  .tool{
+    font-size: 12px !important;
+    padding-bottom: 10px !important;
+  }
+  /* .textArea{
+    height: 125px;
+    padding-left: 24px;
+  }
+  .nameLable2{
+    top: 30px;
+    left: 24px;
+    font-size: 18px;
+  }
+  .nameLableChange2{
+    top: 16px;
+    left: 24px;
+    font-size: 14px;
+  } */
+
+  /* textarea的单独样式 */
+  .textCon{
+    position: relative;
+    background: #F1F6FA;
+    /* background: yellow; */
+    padding-bottom: 24px;
+    padding-top: 36px;
+  }
+  .textArea{
+    padding-top: 0px;
+    width: 100%;
+    height: 125px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border: none;
+    background: #F1F6FA;
+  }
+  .nameLable2{
+    position: absolute;
+    color: #333333;
+    font-size: 18px;
+    font-family: aliFontM;
+    top: 12px;
+    left: 24px;
+    transition: 0.3s all ease;
+  }
+
+  .nameLableChange2{
+    position: absolute;
+    font-size: 14px;
+    color: #999999;
+    font-family: aliFontR;
+    top: 8px;
+    left: 24px;
+  }
+  .formInCircleT{
+    position: absolute;
+    right: 24px;
+    top: 14px;
+  }
+  .formInIconT{
+    position: absolute;
+    right: 24px;
+    top: 12px;
+    font-size: 16px;
+  }
+  .formInIconET{
+    position: absolute;
+    right: 24px;
+    top: 12px;
+    font-size: 16px;
+    color: #D5000B;
+  }
+  .formInParaT{
+    font-size: 12px;
+    color: #D5000B;
+    font-family: aliFontM;
+    position: absolute;
+    right: 50px;
+    top: 14px;
+  }
+
+
+
+  .submitBtn{
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    font-size: 18px;
+    transition: 0.5s all ease;
+    border: 3px solid #333;
+    word-spacing: 10px;
+    transform: translate(-75px, 0);
+  }
+  .submitBtn:hover{
+    cursor: pointer;
+    border: 1px solid #FC4719;
+    background: #FC4719;
+    color: white;
+  }
+
+}
+
+.entranceContact{
+  animation: bounceInLeft;
+  animation-duration: 2s;
 }

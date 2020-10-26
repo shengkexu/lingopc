@@ -11,6 +11,28 @@ import mengniu7 from '../assets/caseDetail/mengniu/7.jpg'
 import mengniu8 from '../assets/caseDetail/mengniu/8.jpg'
 import mengniu9 from '../assets/caseDetail/mengniu/9.jpg'
 
+//cixi
+import cixi from '../assets/caseMain/cixi/cixi.png'
+import cixiW from '../assets/caseMain/cixi/cixi3.png'
+import cixi1 from '../assets/caseDetail/cixi/1.jpg'
+import cixi2 from '../assets/caseDetail/cixi/2.jpg'
+import cixi3 from '../assets/caseDetail/cixi/3.jpg'
+import cixi4 from '../assets/caseDetail/cixi/4.jpg'
+import cixi5 from '../assets/caseDetail/cixi/5.jpg'
+import cixi6 from '../assets/caseDetail/cixi/6.jpg'
+import cixi7 from '../assets/caseDetail/cixi/7.jpg'
+import cixi8 from '../assets/caseDetail/cixi/8.jpg'
+import cixi9 from '../assets/caseDetail/cixi/9.jpg'
+import cixi10 from '../assets/caseDetail/cixi/10.jpg'
+import cixi11 from '../assets/caseDetail/cixi/11.jpg'
+import cixi12 from '../assets/caseDetail/cixi/12.jpg'
+import cixi13 from '../assets/caseDetail/cixi/13.jpg'
+import cixi14 from '../assets/caseDetail/cixi/14.jpg'
+import cixi15 from '../assets/caseDetail/cixi/15.jpg'
+import cixi16 from '../assets/caseDetail/cixi/16.jpg'
+import cixi17 from '../assets/caseDetail/cixi/17.jpg'
+import cixi18 from '../assets/caseDetail/cixi/18.jpg'
+
 //xibei
 import xibei from '../assets/caseMain/xibei/xibei.png'
 import xibeiW from '../assets/caseMain/xibei/xibei3.png'
@@ -218,44 +240,99 @@ var caseDetail = [
   {
     id: '02',
     color: '#CC6000',
-    logo: mengniu,
+    logo: cixi,
     type: 1,
-    logoW: mengniuW,
+    logoW: cixiW,
     descm: '2017 - vis视觉识别系统',
     mod: 1,
     name: '粢喜',
     desc: '粢喜Ricepie是专注于精致化的中式手作饭团；核心强调“快食+健康+精致”的就餐理念,越来越多的年轻上班族在饮食方式上逐渐奉行“简餐主义”，粢喜主打的“饭团”分量不多但精致可口,简易、不用花太多时间就能吃饱且内馅可任性搭配,同时坚持食物的高品质保证食物可口，致力于打造成为中国版的“wagas“！',
-    cover: {src: xibei1,srcList:[xibei1]},
+    cover: {src: cixi1,srcList:[cixi1]},
     image:[
       {
         id: '2',
-        src: xibei2,
-        srcList: [xibei2]
+        src: cixi2,
+        srcList: [cixi2]
       },
       {
         id: '3',
-        src: xibei3,
-        srcList: [xibei3]
+        src: cixi3,
+        srcList: [cixi3]
       },
       {
         id: '4',
-        src: xibei4,
-        srcList: [xibei4]
+        src: cixi4,
+        srcList: [cixi4]
       },
       {
         id: '5',
-        src: xibei5,
-        srcList: [xibei5]
+        src: cixi5,
+        srcList: [cixi5]
       },
       {
         id: '6',
-        src: xibei6,
-        srcList: [xibei6]
+        src: cixi6,
+        srcList: [cixi6]
       },
       {
         id: '7',
-        src: xibei7,
-        srcList: [xibei7]
+        src: cixi7,
+        srcList: [cixi7]
+      },
+      {
+        id: '8',
+        src: cixi8,
+        srcList: [cixi8]
+      },
+      {
+        id: '9',
+        src: cixi9,
+        srcList: [cixi9]
+      },
+      {
+        id: '10',
+        src: cixi10,
+        srcList: [cixi10]
+      },
+      {
+        id: '11',
+        src: cixi11,
+        srcList: [cixi11]
+      },
+      {
+        id: '12',
+        src: cixi12,
+        srcList: [cixi12]
+      },
+      {
+        id: '13',
+        src: cixi13,
+        srcList: [cixi13]
+      },
+      {
+        id: '14',
+        src: cixi14,
+        srcList: [cixi14]
+      },
+      {
+        id: '15',
+        src: cixi15,
+        srcList: [cixi15]
+      },
+      {
+        id: '16',
+        src: cixi16,
+        srcList: [cixi16]
+      },
+      {
+        id: '17',
+        src: cixi17,
+        srcList: [cixi17]
+      },
+      {
+        id: '18',
+        src: cixi18,
+        srcList: [cixi18]
       }
     ]
   },
@@ -312,7 +389,7 @@ var caseDetail = [
     descm: '2019 - vis视觉识别系统',
     mod: 1,
     name: '万科',
-    desc: 'dsdasd',
+    desc: '万科汽车互联网核心产业园（运河万科中心）是杭州汽车互联网小镇的核心项目，位于祥符街道花园岗街与萍水东街交叉口，总用地面积约112亩，总建筑面积约38万平方米，以汽车互联网产业为核心，重点布局汽车电商、汽车共享出行、汽车金融和汽车后市场四大产业。\n\n运河万科中心以打造杭州汽车互联网产业园区为项目目标宗旨,着眼整个片区城市更新,在这样一个传统汽车产业聚集区中心,结合政府的战略规划与产业升级转型。打造区域产业标杆,带动周边汽车产业发展,重朔土地属性的价值运河万科中在汽车文化的背景下,打造科技、艺术、自然的高品质商业、办公、生活空间。',
     cover: {src: vanke1,srcList:[vanke1]},
     image:[
       {
@@ -471,7 +548,7 @@ var caseDetail = [
     descm: '2019 - vis视觉识别系统',
     mod: 1,
     name: '龙控中南',
-    desc: 'dsdasd',
+    desc: '龙控中南 天宁·春溪郡项目位于江苏常州天宁高新区，城市中心所在，往往也是资源焦点汇集之处。项目整体以文化气息为主，项目一路之隔的郑陆实验学校和比邻的季子文化公园，体现了项目居住品质和人文氛围。\n\n受限于天宁相对落后的城市界面，项目需要以历史内涵和未来前景为项目赋能，赋予项目低密人居以繁华和厚重的人文背景。历史文脉、名门大家、未来潜景作为人文资源、精神资源、区域资源的集大成，成为项目故事线挖掘的三大维度。',
     cover: {src: zhongnan1,srcList:[zhongnan1]},
     image:[
       {
@@ -599,7 +676,7 @@ var caseDetail = [
     descm: '2019 - vis视觉识别系统',
     mod: 2,
     name: '世茂深港',
-    desc1: 'Lingoo Design为质心提供了品牌LOGO设计、VI基础部分设计和部分产品包装设计展示。\n质心的标志返理归真,中文简称采用中式手写体，英文字母以西式衬线体的形式用现代的设计手法呈现出来，既彰显东方文化，又不失现代、国际，东情西韵之感表现淋滴尽致;标志整体识别性强，记忆点突出。设计期翼从视觉即展开体验，享受天然、纯粹的匠心气息，树立品牌风格，为消费者提供完美的体验。',
+    desc1: '粤港澳大湾区首个战略落地的超级综合体项目世茂深港国际中心。其大小约为2个东京六本木新城,3个纽约曼哈顿广场该地标造于深港极点与城市群轴带交汇的时代坐标,由世茂集团打造。以一座云端巨塔为标志,以湾区精神为开发原则,融合十余种业态,开启世界级城市群的未来。\n\n世茂深港国际中心占地面积32.19万㎡， 计容面积约136万㎡，总投资额将达500亿元。根据总体规划，该项目将建设成集深港国际会议展览中心、深港青年合作创业中心、深港国际演艺中心、国际化学校、超五星级酒店、智能办公。世茂深港国际中心世界上最高的观景体验区之一，旨在打造深圳天际线的一个新的雕塑地标。',
     desc2: '精神，是人文的向往\n传示，是时间的永恒\n文明，是城市的终点\n奇迹，是想象的极限\n今天，我们格书法与英文结合,语境意义上的国界正在消融\n让深港成为一种不可再生的连接，一种不可忽略的意义，为世界树立起一道永恒仰望的旗帜\n在全球化信息浪潮中\n集文字之声，书法之美，文化之底，时代之创，诞生一处掷地有声的符号',
     cover1: {src: shimao1,srcList:[shimao1]},
     cover2: {src: shimao2,srcList:[shimao2]},
@@ -636,7 +713,7 @@ var caseDetail = [
       },
       {
         id: '9',
-        src: zhixin9,
+        src: shimao9,
         srcList: [shimao9]
       },
       {

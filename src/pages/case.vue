@@ -6,11 +6,11 @@
         <div class="fakeLogo" ref="fakeLogo"></div>
         <div class="mainBattle" ref="mainBattle">
           <div class="caseTopLogo">
-              <img ref="caseTopLogoImg" src="../assets/menu/logo-f.png" alt="logo">
+              <img ref="caseTopLogoImg" src="../assets/menu/logo-f.png" alt="凌言广告">
           </div>
           <div class="caseDLogoCon" ref="caseDLogoCon">
-            <img v-if="mainContent[currentIndex].type == 1" ref="caseDLogo" class="caseDLogo" :src="mainContent[currentIndex].logo" alt="xibei">
-            <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" :src="mainContent[currentIndex].logo" alt="xibei">
+            <img v-if="mainContent[currentIndex].type == 1" ref="caseDLogo" class="caseDLogo" :src="mainContent[currentIndex].logo" alt="凌言广告">
+            <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" :src="mainContent[currentIndex].logo" alt="凌言广告">
             <!-- <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" src="../assets/loading.png" alt="xibei"> -->
           </div>
           <div class="caseColor" ref="caseColor"></div>
@@ -23,11 +23,11 @@
               </div>
               <div class="caseDescLDesigner">
                 <p class="caseDescLDesignerTitle">设计师</p>
-                <p class="caseDescLDesignerName">黄晓明</p>
+                <p class="caseDescLDesignerName">凌言广告</p>
               </div>
             </div>
             <div class="caseDescR">
-              <img :src="mainContent[currentIndex].logoW" alt="xibeiO">
+              <img v-lazy="mainContent[currentIndex].logoW" alt="凌言广告">
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
           class="caseContentImg"
           :src="mainContent[currentIndex].cover.src"
           :preview-src-list="mainContent[currentIndex].cover.srcList">
-          <div slot="placeholder" class="image-slot">
+          <div slot="placeholder" class="image-slot" lazy>
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
         </el-image>
@@ -58,6 +58,7 @@
           :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index"
+          lazy
           >
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
@@ -70,7 +71,7 @@
         <el-image
           class="caseContentImg"
           :src="mainContent[currentIndex].cover1.src"
-          :preview-src-list="mainContent[currentIndex].cover1.srcList">
+          :preview-src-list="mainContent[currentIndex].cover1.srcList" lazy>
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
@@ -84,7 +85,7 @@
         <el-image
           class="caseContentImg"
           :src="mainContent[currentIndex].cover2.src"
-          :preview-src-list="mainContent[currentIndex].cover2.srcList">
+          :preview-src-list="mainContent[currentIndex].cover2.srcList" lazy>
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
@@ -100,6 +101,7 @@
           :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index"
+          lazy
           >
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
@@ -112,7 +114,7 @@
         <el-image
           class="caseContentImg"
           :src="mainContent[currentIndex].cover.src"
-          :preview-src-list="mainContent[currentIndex].cover.srcList">
+          :preview-src-list="mainContent[currentIndex].cover.srcList" lazy>
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
@@ -129,6 +131,7 @@
           :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index+12"
+          lazy
           >
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
@@ -147,6 +150,7 @@
           :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index+33"
+          lazy
           >
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
@@ -165,6 +169,7 @@
           :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index+55"
+          lazy
           >
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
@@ -175,7 +180,7 @@
 
 
       <div class="caseFooterCon" ref="bottomDiv">
-        <div class="caseFooterTitleCon">
+        <!-- <div class="caseFooterTitleCon">
           <p class="caseFooterTitle">其他案例</p>
           <p class="caseFooterNum">NO.<span>{{thumbArray[currentIndexch].id}}</span><span class="caseNumWordBlack"><span class="caseNumWord">|</span>{{mainContent.length}}</span></p>
         </div>
@@ -184,9 +189,7 @@
             <div class="thumbLine"></div>
             <div class="thumbConS2" ref="scrollDiv2">
               <img :style="thumbStyle" class="thumbImg" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index" @click="clickThumb(index)">
-              <!-- <img v-if="isRotate" class="thumbImg" :style="thumbStyle" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index"> -->
             </div>
-            <!-- <div class="thumbLine2"></div> -->
           </div>
         </div>
         <div class="thumbFooterNameCon">
@@ -201,26 +204,26 @@
             <p class="backHomeBtn" @click="gotoHome()">返回首页</p>
             <p class="backTopBtn"  @click="scrollToTop()"><i class="iconfont iconTop">&#xe665;</i>回到顶部</p>
           </div>
-        </div>
-        <div class="footer">
-          <p>到底了哟~︿(￣︶￣)︿</p>
+        </div> -->
+        <div class="footer" @click="gotoContact()">
+          <p>联系我们~(*/ω＼*)</p>
         </div>
       </div>
     </div>
     <div ref="fixButtonCon" class="fixButtonCon">
       <div class="fixButtonOut" @click="gotoLast()">
-        <i class="iconfont fixBtn leftArrow">&#xe663;</i>
+        <i class="iconfont fixBtn">&#xe666;</i>
       </div>
       <div class="fixButtonOut" @click="gotoHome()">
-        <i class="iconfont fixBtn">&#xe662;</i>
+        <i class="iconfont fixBtn">&#xe667;</i>
       </div>
       <div class="fixButtonOut" @click="gotoNext()">
-        <i class="iconfont fixBtn">&#xe65e;</i>
+        <i class="iconfont fixBtn">&#xe668;</i>
       </div>
     </div>
     <div ref="scrollTopBtn" class="scrollTop" @click="scrollToTop()">
       <div class="scrollTopBtn">
-        <i class="iconfont fixBtn">&#xe664;</i>
+        <i class="iconfont fixBtn">&#xe66b;</i>
       </div>
     </div>
   </div>
@@ -256,17 +259,17 @@ export default {
   mounted(){
     //this.mainContent = this.mainContent2
     this.caseId = this.$route.params.id
-    console.log(this.caseId)
     this.$refs.caseColor.style.background = this.mainContent[this.caseId-1].color
+    console.log(this.caseId,this.screenWidth)
     setTimeout(()=>{
       var ref = this.$refs
+      ref.caseColor.style.background = this.mainContent[this.caseId-1].color
       ref.mainBattle.style.height = '100vh'
       ref.fakeLogo.style.height = '0px'
       ref.fakeBot1.style.height = '0px'
       ref.fakeBot2.style.height = '0px'
       ref.fakeBot2.style.marginTop= '0px'
-      // ref.caseColor.style.width = '100vw'
-      // ref.caseColor.style.height = '100vh'
+
       ref.mainBattle.style.marginTop = '0px'
       ref.caseDLogoCon.style.width = '100vw'
       ref.caseDLogoCon.style.height = '70vh'
@@ -274,14 +277,22 @@ export default {
       ref.caseDLogoCon.style.left = '0'
       ref.caseDLogoCon.style.marginLeft = '0'
       ref.caseDLogoCon.style.marginTop = '0'
-      // ref.caseDLogoCon.style.margin = 'inherit'
-      // ref.caseDLogoCon.style.transform = 'translate(0,0)'
-      if(this.mainContent[this.currentIndex].type == 1){
-        ref.caseDLogo.style.width = '80px'
-      }else{
-        ref.caseDLogo2.style.width = '120px'
+
+
+      if(this.screenWidth<1920){
+        if(this.mainContent[this.currentIndex].type == 1){
+          ref.caseDLogo.style.width = '80px'
+        }else{
+          ref.caseDLogo2.style.width = '120px'
+        }
+      }else if(this.screenWidth>=1920){
+        if(this.mainContent[this.currentIndex].type == 1){
+          ref.caseDLogo.style.width = '160px'
+        }else{
+          ref.caseDLogo2.style.width = '200px'
+        }
       }
-      ref.fixButtonCon.style.opacity = '0.3'
+
     }, 100)
     setTimeout(()=>{
       var ref = this.$refs
@@ -298,27 +309,27 @@ export default {
       this.currentIndex = (casenum-1).toString()
       this.currentIndexch = this.currentIndex
 
-      if(this.screenWidth<1920){
-        var scrollWidth = this.thumbArray.length*100 + this.screenWidth - 100 + 'px'
-        console.log(scrollWidth)
-        this.$refs.scrollDiv2.style.width = scrollWidth
-
-        var initLength = -(this.caseId-1)*100 + 'px'
-        this.thumbStyle = {
-          transition: '0.5s all ease',
-          transform: "translate(" + initLength + ", 0)"
-        }
-      }else{
-        var scrollWidth = this.thumbArray.length*200 + this.screenWidth - 200 + 'px'
-        console.log(scrollWidth)
-        this.$refs.scrollDiv2.style.width = scrollWidth
-
-        var initLength = -(this.caseId-1)*200 + 'px'
-        this.thumbStyle = {
-          transition: '0.5s all ease',
-          transform: "translate(" + initLength + ", 0)"
-        }
-      }
+      // if(this.screenWidth<1920){
+      //   var scrollWidth = this.thumbArray.length*100 + this.screenWidth - 100 + 'px'
+      //   console.log(scrollWidth)
+      //   this.$refs.scrollDiv2.style.width = scrollWidth
+      //
+      //   var initLength = -(this.caseId-1)*100 + 'px'
+      //   this.thumbStyle = {
+      //     transition: '0.5s all ease',
+      //     transform: "translate(" + initLength + ", 0)"
+      //   }
+      // }else{
+      //   var scrollWidth = this.thumbArray.length*200 + this.screenWidth - 200 + 'px'
+      //   console.log(scrollWidth)
+      //   this.$refs.scrollDiv2.style.width = scrollWidth
+      //
+      //   var initLength = -(this.caseId-1)*200 + 'px'
+      //   this.thumbStyle = {
+      //     transition: '0.5s all ease',
+      //     transform: "translate(" + initLength + ", 0)"
+      //   }
+      // }
 
     })
   },
@@ -333,26 +344,26 @@ export default {
           })
           this.currentIndexch = 11
           //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
-          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
-          this.thumbStyle = {
-            transition: '0.5s all ease',
-            transform: "translate(" + moveDistance + ", 0)"
-          }
-          console.log(this.currentIndex)
+          // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          // var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+          // this.thumbStyle = {
+          //   transition: '0.5s all ease',
+          //   transform: "translate(" + moveDistance + ", 0)"
+          // }
+          // console.log(this.currentIndex)
         }else{
           this.currentIndex --
           this.$router.push({
             path: `/case/${this.thumbArray[this.currentIndex].id}`
           })
           this.currentIndexch = this.currentIndex
-          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
-          this.thumbStyle = {
-            transition: '0.5s all ease',
-            transform: "translate(" + moveDistance + ", 0)"
-          }
-          console.log(this.currentIndex)
+          // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          // var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+          // this.thumbStyle = {
+          //   transition: '0.5s all ease',
+          //   transform: "translate(" + moveDistance + ", 0)"
+          // }
+          // console.log(this.currentIndex)
         }
       }else{
         if(this.currentIndex == 0){
@@ -361,27 +372,26 @@ export default {
             path: `/case/9`
           })
           this.currentIndexch = 11
-          //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
-          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
-          this.thumbStyle = {
-            transition: '0.5s all ease',
-            transform: "translate(" + moveDistance + ", 0)"
-          }
-          console.log(this.currentIndex)
+          // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          // var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+          // this.thumbStyle = {
+          //   transition: '0.5s all ease',
+          //   transform: "translate(" + moveDistance + ", 0)"
+          // }
+          // console.log(this.currentIndex)
         }else{
           this.currentIndex --
           this.$router.push({
             path: `/case/${this.thumbArray[this.currentIndex].id}`
           })
           this.currentIndexch = this.currentIndex
-          var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
-          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
-          this.thumbStyle = {
-            transition: '0.5s all ease',
-            transform: "translate(" + moveDistance + ", 0)"
-          }
-          console.log(this.currentIndex)
+          // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+          // var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+          // this.thumbStyle = {
+          //   transition: '0.5s all ease',
+          //   transform: "translate(" + moveDistance + ", 0)"
+          // }
+          // console.log(this.currentIndex)
         }
       }
 
@@ -396,39 +406,36 @@ export default {
           path: `/case/1`
         })
         this.currentIndexch = 0
-        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
 
-        if(this.screenWidth<1920){
-          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
-        }else {
-          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
-        }
-
-        //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
-        this.thumbStyle = {
-          transition: '0.5s all ease',
-          transform: "translate(" + moveDistance + ", 0)"
-        }
-        console.log(this.mainContent[this.currentIndex].type)
+        // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+        // if(this.screenWidth<1920){
+        //   var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+        // }else {
+        //   var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+        // }
+        // this.thumbStyle = {
+        //   transition: '0.5s all ease',
+        //   transform: "translate(" + moveDistance + ", 0)"
+        // }
+        // console.log(this.mainContent[this.currentIndex].type)
       }else{
         this.currentIndex ++
         this.$router.push({
           path: `/case/${this.thumbArray[this.currentIndex].id}`
         })
         this.currentIndexch = this.currentIndex
-        var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
 
-        if(this.screenWidth<1920){
-          var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
-        }else{
-          var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
-        }
-
-        this.thumbStyle = {
-          transition: '0.5s all ease',
-          transform: "translate(" + moveDistance + ", 0)"
-        }
-        console.log(this.mainContent[this.currentIndex].type)
+        // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
+        // if(this.screenWidth<1920){
+        //   var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
+        // }else{
+        //   var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
+        // }
+        // this.thumbStyle = {
+        //   transition: '0.5s all ease',
+        //   transform: "translate(" + moveDistance + ", 0)"
+        // }
+        // console.log(this.mainContent[this.currentIndex].type)
       }
     },
     changeContent(){
@@ -532,28 +539,31 @@ export default {
       }
     },
     handleScroll(){
-      //console.log('dsads')
+
       this.bottomHeight = this.$refs.bottomDiv.getBoundingClientRect().top
-      //if(this.bottomHeight <=750){
-      if(this.bottomHeight <=1200){
-        this.$refs.fixButtonCon.style.display = 'none'
-      }else{
-        this.$refs.fixButtonCon.style.display = 'flex'
-        this.$refs.fixButtonCon.style.opacity = '0.3'
-      }
+      // if(this.bottomHeight <=1200){
+      //   this.$refs.fixButtonCon.style.display = 'none'
+      // }else{
+      //   this.$refs.fixButtonCon.style.display = 'flex'
+      //   this.$refs.fixButtonCon.style.opacity = '0.3'
+      // }
+
+      this.$refs.fixButtonCon.style.display = 'flex'
+      // this.$refs.fixButtonCon.style.opacity = '0.3'
       this.scrollHeight = document.body.scrollTop || document.documentElement.scrollTop
+      // console.log(this.scrollHeight)
       if(this.scrollHeight <= 600){
         this.$refs.scrollTopBtn.style.opacity = '0'
-        var currentHeight = (60 + 1/20*this.scrollHeight).toString() + "vh"
+        var currentHeight = (58.8 + 1/20*this.scrollHeight).toString() + "vh"
         this.$refs.fixButtonCon.style.top = currentHeight
       }else{
-        this.$refs.scrollTopBtn.style.opacity = '0.3'
+        this.$refs.scrollTopBtn.style.opacity = '1'
       }
-      if(this.scrollHeight > 600 && this.bottomHeight > 1200){
+      if(this.scrollHeight > 600){
       //if(this.scrollHeight > 600 && this.bottomHeight > 750){
-        this.$refs.scrollTopBtn.style.opacity = '0.3'
+        // this.$refs.scrollTopBtn.style.opacity = '0.3'
       }else{
-        this.$refs.scrollTopBtn.style.opacity = '0'
+        //this.$refs.scrollTopBtn.style.opacity = '1'
       }
     },
     scrollToTop(){
@@ -562,6 +572,11 @@ export default {
         left: 0,
         behavior: 'smooth'
       });
+    },
+    gotoContact(){
+      this.$router.push({
+        path: '/contact'
+      })
     }
   },
   watch: {
@@ -569,11 +584,20 @@ export default {
       this.$refs.caseColor.style.background = this.mainContent[val].color
       this.$nextTick(()=>{
         setTimeout(()=>{
-          if(this.mainContent[val].type == 1){
-            this.$refs.caseDLogo.style.width = '80px'
+          if(this.screenWidth<1920){
+            if(this.mainContent[val].type == 1){
+              this.$refs.caseDLogo.style.width = '80px'
+            }else{
+              this.$refs.caseDLogo2.style.width = '120px'
+            }
           }else{
-            this.$refs.caseDLogo2.style.width = '120px'
+            if(this.mainContent[val].type == 1){
+              this.$refs.caseDLogo.style.width = '160px'
+            }else{
+              this.$refs.caseDLogo2.style.width = '200px'
+            }
           }
+
         },100)
       })
     }

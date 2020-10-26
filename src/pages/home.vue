@@ -3,57 +3,57 @@
     <Menu/>
     <div class="caseCon" ref="homeCon" @mousewheel="wheelInit($event)">
       <div class="logo">
-        <img class="mainLogo" src="../assets/menu/logo-f.png" alt="logo">
+        <img class="mainLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
       </div>
-      <div class="bigShowCon entranceAniR" @click="gotoDetail()" v-if="thumbArray.length !== 0">
+      <div class="bigShowCon" :class="{'entranceAniR' : loadingEnd}" @click="gotoDetail()" v-if="thumbArray.length !== 0">
         <div class="test1">
           <div class="caseConUpCon1">
             <p class="caseNumWordConP">NO.<span :class="{'ani' : isRotate}">{{thumbArray[currentContentIndex].id}}</span><span class="caseNumWordBlack"><span class="caseNumWord">|</span>{{thumbArray.length/2}}</span></p>
           </div>
           <div class="caseConUpCon2">
-            <img v-if="thumbArray[currentContentIndex].type == 1" class="caseLogo" :src="thumbArray[currentContentIndex].logoB" :alt="thumbArray[currentContentIndex].name">
-            <img v-if="thumbArray[currentContentIndex].type == 2" class="caseLogo2" :src="thumbArray[currentContentIndex].logoB" :alt="thumbArray[currentContentIndex].name">
+            <img v-if="thumbArray[currentContentIndex].type == 1" class="caseLogo" :src="thumbArray[currentContentIndex].logoB" alt="凌言广告">
+            <img v-if="thumbArray[currentContentIndex].type == 2" class="caseLogo2" :src="thumbArray[currentContentIndex].logoB" alt="凌言广告">
           </div>
           <div class="caseConUpCon3">
             <p class="caseDesc1" :class="{'ani' : isRotate}">{{thumbArray[currentContentIndex].desc}}</p>
           </div>
         </div>
-        <img class="caseImg" :src="thumbArray[currentContentIndex].bcImg" :alt="thumbArray[currentContentIndex].name" :class="{'changePosition' : isRotate}">
+        <img class="caseImg" :src="thumbArray[currentContentIndex].bcImg" alt="凌言广告" :class="{'changePosition' : isRotate}">
         <div class="imgBack" ref="imgBack"></div>
       </div>
 
-      <!-- <img src="../assets/design.gif" alt="design" class="gifImg"> -->
-      <div class="caseTitleCon" v-if="thumbArray.length !== 0" @click="gotoDetail()">
+      <!-- <img v-if="screenWidth>1024" src="../assets/homegif.gif" alt="design" class="gifImg"  :class="{'entranceAniOp' : loadingEnd}"> -->
+      <div class="caseTitleCon" :class="{'entranceAniR' : loadingEnd}" v-if="thumbArray.length !== 0" @click="gotoDetail()">
         <p class="caseTitle">{{thumbArray[currentContentIndex].name}}</p>
         <div class="caseConUpCon3B">
           <p class="caseDesc2" :class="{'ani' : isRotate}">{{thumbArray[currentContentIndex].desc}}</p>
         </div>
-        <p class="thumbTitle">点击查看详情<i class="iconfont thumbArrow">&#xe656;</i></p>
+        <div class="thumbTitleCon">
+          <p class="thumbTitle">点击查看详情</p>
+          <i class="iconfont thumbArrow">&#xe656;</i>
+        </div>
       </div>
 
-
-
-      <div class="thumbConRe">
-        <div class="wheelCon" v-if="screenWidth>1024">
+      <div class="thumbConRe" :class="{'entranceAniOp' : loadingEnd}">
+        <div class="wheelCon infiniteAni" v-if="screenWidth>1024">
           <p><i class="iconfont">&#xe65b;</i>请滑动鼠标</p>
         </div>
         <div class="thumbCon" v-if="thumbArray.length !== 0"  @scroll="onScroll()">
           <div class="thumbLine"></div>
           <div class="thumbConS" ref="scrollDiv">
-            <img :style="thumbStyle" class="thumbImg" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.name" :key="index" @click="clickThumb(index)">
+            <img :style="thumbStyle" class="thumbImg" v-for="(thumb, index) in thumbArray" :src="thumb.url" alt="凌言广告" :key="index" @click="clickThumb(index)">
             <!-- <img v-if="isRotate" class="thumbImg" :style="thumbStyle" v-for="(thumb, index) in thumbArray" :src="thumb.url" :alt="thumb.id" :key="index"> -->
           </div>
           <div class="thumbLine2"></div>
         </div>
       </div>
-
-
     </div>
   </div>
 
 </template>
 
 <script>
+import {mapState,mapActions} from 'vuex'
 import thumbArrayTest from '../utils/homeContent.js'
 import homeImg from '../utils/homeImage.js'
 // import imageArray from '../utils/homeContent.js'
@@ -67,6 +67,7 @@ export default {
   },
   data(){
     return{
+      loadingEnd: false,
       step : 0,
       loading: true,
       percentage: 0,
@@ -81,10 +82,12 @@ export default {
       thumbArrayS: [],
       thumbArray: thumbArrayTest,
       homeImgArray: homeImg,
-      isRunning : false
+      isRunning : false,
+      clickMove: 0,
     }
   },
   methods:{
+    ...mapActions(['changeLoadingStateAl']),
     changePosition: function(){
       if(this.isRotate == true){
         console.log('antialiased')
@@ -105,7 +108,10 @@ export default {
           var n1 = this.$refs.scrollDiv.getBoundingClientRect().left
           this.currentIndex = index
           console.log(index, this.currentContentIndex)
-          var moveDistance = (0-index)*100-n1 + 'px'
+          this.clickMove = (0-index)*100
+
+          // var moveDistance = (0-index)*100 + 'px'
+          var moveDistance = (0-index)*100 - n1 + 'px'
           this.thumbStyle = {
             transition: '0.5s all ease',
             transform: "translate(" + moveDistance + ", 0)"
@@ -134,7 +140,8 @@ export default {
           var n1 = this.$refs.scrollDiv.getBoundingClientRect().left
           this.currentIndex = index
           console.log(index, this.currentContentIndex)
-          var moveDistance = (0-index)*200-n1 + 'px'
+          this.clickMove = (0-index)*200
+          var moveDistance = (0-index)*200 + 'px'
           this.thumbStyle = {
             transition: '0.5s all ease',
             transform: "translate(" + moveDistance + ", 0)"
@@ -157,11 +164,22 @@ export default {
           }
         }
       }
-
+      this.step = -index
+      console.log(this.clickMove)
     },
     onResize(){
       this.screenHeight = window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight
       this.screenWidth = document.body.clientWidth
+      // if(this.screenWidth<1920){
+      //   var controlLength = '-1200px'
+      // }else{
+      //   var controlLength = '-2400px'
+      // }
+      //
+      // this.thumbStyle = {
+      //   transition: '0.5s all ease',
+      //   transform: "translate(" + controlLength + ", 0)"
+      // }
     },
     onScroll(){
       clearTimeout(timer)
@@ -228,7 +246,7 @@ export default {
               }
             }
           }
-        },70)
+        },30)
       }else{
         timer = setTimeout(()=>{
           n2 = this.$refs.scrollDiv.getBoundingClientRect().left
@@ -285,7 +303,7 @@ export default {
               }
             }
           }
-        },70)
+        },30)
       }
 
     },
@@ -297,6 +315,7 @@ export default {
       }
     },
     wheelInit($event){
+      this.step = -this.currentIndex
       var backOrFor = event.wheelDelta || event.detail
       if(this.screenWidth>=1024){
         if(backOrFor>0){
@@ -342,7 +361,19 @@ export default {
   mounted(){
     this.$nextTick(() => {
       var that = this
+      //判断loading结束
+      if(that.$store.state.loadingState == 0){
+        that.loadingEnd = true
+      }
+      // if(that.$store.state.loadingState == false){
+      //
+      //   setTimeout(()=>{
+      //     that.entranceAniOp = {animation: 'fadeIn', animationDuration: '2s'}
+      //   },100)
+      // }
       window.addEventListener('resize', that.onResize);
+
+
       //window.addEventListener('mousewheel', that.wheelInit);
       that.currentContentIndex = that.currentIndex
       this.$refs.imgBack.style.background = this.thumbArray[this.currentContentIndex].color
@@ -359,12 +390,27 @@ export default {
         var scrollWidth = that.thumbArray.length*100 + that.screenWidth - 100 + 'px'
         console.log(scrollWidth)
         that.$refs.scrollDiv.style.width = scrollWidth
+        var moveDistance = '0px'
+        this.currentIndex = 0
+        this.currentContentIndex = 0
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + moveDistance + ", 0)"
+        }
       }else{
         var scrollWidth = that.thumbArray.length*200 + that.screenWidth - 200 + 'px'
         console.log(scrollWidth)
         that.$refs.scrollDiv.style.width = scrollWidth
+        var moveDistance = '-2400px'
+        this.currentIndex = 12
+        this.currentContentIndex = 12
+        this.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + moveDistance + ", 0)"
+        }
       }
 
+      var n2 = that.$refs.scrollDiv.getBoundingClientRect().left
     })
   },
   beforeUnmount(){
@@ -385,6 +431,12 @@ export default {
       this.screenHeight = val
       var heightString = val.toString()
       this.$refs.homeCon.style.height = heightString + 'px'
+    },
+    '$store.state.loadingState': function(){
+      if(this.$store.state.loadingState == false){
+          this.loadingEnd = true
+          this.$store.commit('changeLoadingStateAl')
+      }
     }
   }
 }

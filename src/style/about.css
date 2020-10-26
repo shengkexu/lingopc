@@ -1,0 +1,241 @@
+.aboutContainer{
+  box-sizing: border-box;
+  padding: 0px 8px 8px 8px;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.flexCon{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 86vh;
+  margin-top: 30px;
+  /* background: red; */
+}
+.aboutRigntBotCon{
+
+}
+.aboutLogo{
+  width: 100%;
+  height: 10vh;
+}
+.aboutMainLogo{
+  width: 100px;
+  height: 46px;
+  margin-top: 16px;
+}
+.myVideoCon{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 200px;
+  height: 110px;
+  z-index: 2;
+}
+.myVideoInCon{
+  position: relative;
+  width: 200px;
+  height: 110px;
+}
+.videoPlayIconCon{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.videoPlayIcon{
+  font-size: 16px;
+  color: black;
+}
+.myVideo{
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.aboutImgCon{
+  /* margin-top: 20px; */
+}
+.aboutVideoCon{
+  /* margin-top: 14px; */
+  position: relative;
+  height: 110px;
+}
+.sliderImg{
+  width: 100%;
+  height: auto;
+}
+.videoText{
+  position: absolute;
+  font-size: 60px;
+  font-family: lackFontI;
+  color: #000;
+  opacity: 0.08;
+  top: 20px;
+  left: 10px;
+  z-index: 1;
+}
+.aboutTextCon{
+  margin-top: 30px;
+  width: 100%;
+  height: 179px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.aboutTitle{
+  float: left;
+  font-size: 18px;
+  font-family: aliFontM;
+}
+.aboutEng{
+  float: right;
+  font-size: 26px;
+  font-family: lackFontR;
+  font-weight: 400;
+  opacity: 0.1;
+}
+.aboutLine{
+  clear: both;
+  width: 30px;
+  height: 2px;
+  background: #FC4719;
+}
+.aboutTextBot{
+  /* margin-top: 10px; */
+  text-align: left;
+  font-size: 10px;
+  font-family: oppoFontR;
+  color: #AAA;
+  line-height: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .aboutLogo{
+    position: absolute;
+    left: 80px;
+    top: 55px;
+    width: 174px;
+    height: auto;
+  }
+  .aboutMainLogo{
+    margin-top: 0;
+    width: 174px;
+    height: 80px;
+  }
+  .flexCon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+    height: 100vh;
+    margin-top: 0px;
+    position: relative;
+  }
+  .aboutImgCon{
+    position:fixed;
+    bottom:0;
+    left: 0;
+    width: 70vw;
+  }
+  .sliderImg{
+    width: 80vw;
+    height: auto;
+  }
+  .aboutRigntBotCon{
+    height: 75vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 26vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .myVideo{
+    width: 26vw;
+    height: auto;
+  }
+  .myVideoInCon{
+    width: 26vw;
+    height: 26vh;
+  }
+  .myVideoCon{
+    /* position: absolute;
+    top: 0px;
+    right: 0px; */
+    position: inherit;
+    width: 26vw;
+    height: 26vh;
+    z-index: 2;
+  }
+  .aboutVideoCon{
+    height: 40vh;
+  }
+  .videoText{
+    /* position: inherit; */
+    position: absolute;
+    top: 26vh;
+    font-size: 80px;
+    font-family: lackFontI;
+    color: #000;
+    opacity: 0.08;
+    /* top: 27vh;
+    left: 10px; */
+    margin-top: 10px;
+    z-index: 1;
+  }
+  .aboutTextCon{
+    height: 300px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .aboutTitle{
+    /* font-size: aliFontM; */
+    font-size: 28px;
+  }
+  .aboutTextBot p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .videoText{
+    /* position: inherit; */
+    position: absolute;
+    top: 27vh;
+    font-size: 180px;
+    font-family: lackFontI;
+    color: #000;
+    opacity: 0.08;
+    /* top: 27vh;
+    left: 10px; */
+    margin-top: 10px;
+    z-index: 1;
+  }
+}
+
+.entranceAbout1{
+  animation: jackInTheBox;
+  animation-duration: 2s;
+}
+.entranceAbout2{
+  animation: bounceIn;
+  animation-delay: 1s;
+  animation-duration: 1s;
+}
+.entranceAbout3{
+  animation: fadeIn;
+  animation-duration: 2s;
+}

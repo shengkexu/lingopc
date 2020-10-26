@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import {mapState, mapActions} from 'vuex'
 import Loading from './components/Loading.vue'
 import homeImg from './utils/homeImage.js'
 //import HelloWorld from './components/HelloWorld.vue'
@@ -30,6 +31,9 @@ export default {
       loading: true,
       percentage: 0
     }
+  },
+  methods:{
+    ...mapActions(['changeLoadingState'])
   },
   mounted(){
     this.$nextTick(()=>{
@@ -52,6 +56,7 @@ export default {
             console.log(that.percentage)
             if(loaded == array.length){
               that.loading = false
+              that.changeLoadingState()
             }
           }
         }
