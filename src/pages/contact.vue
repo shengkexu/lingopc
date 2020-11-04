@@ -5,7 +5,7 @@
     <div class="logo">
       <img class="mainLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
     </div>
-    <div class="contactInfoCon entranceAniR" v-if="currentWidth<1920">
+    <div class="contactInfoCon entranceAniR" v-if="currentWidth<1440">
       <div class="contactLogoCon">
         <img class="contactLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
       </div>
@@ -29,7 +29,7 @@
 
 
     <div class="contactForm entranceContact">
-      <div class="manCon" v-if="currentWidth<1920">
+      <div class="manCon" v-if="currentWidth<1440">
         <img class="manImg" src="../assets/contact/man.png" alt="凌言广告">
         <img class="handImg" src="../assets/contact/hand.png" alt="凌言广告">
         <img class="bubbleImg" src="../assets/contact/bubble.png" alt="凌言广告">
@@ -108,7 +108,7 @@
     </div>
 
 
-    <div class="contactBigConR" v-if="currentWidth>=1920">
+    <div class="contactBigConR" v-if="currentWidth>=1440">
       <div class="manConB">
         <img class="bubbleImgB" src="../assets/contact/bubble.png" alt="凌言广告">
         <p class="bubbleTextB">Contact Us !</p>

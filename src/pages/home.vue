@@ -101,17 +101,26 @@ export default {
       }
     },
     clickThumb: function(index){
-      if(this.screenWidth<1920){
         if(index == this.currentIndex){
           this.isRotate = false
         }else{
           var n1 = this.$refs.scrollDiv.getBoundingClientRect().left
           this.currentIndex = index
           console.log(index, this.currentContentIndex)
-          this.clickMove = (0-index)*100
 
-          // var moveDistance = (0-index)*100 + 'px'
-          var moveDistance = (0-index)*100 - n1 + 'px'
+          if(this.screenWidth<1440){
+            this.clickMove = (0-index)*100
+            var moveDistance = (0-index)*100 - n1 + 'px'
+          }else if(this.screenWidth>=1440 && this.screenWidth<1920){
+            this.clickMove = (0-index)*150
+            var moveDistance = (0-index)*150 - n1 + 'px'
+          }else if(this.screenWidth>=1920){
+            this.clickMove = (0-index)*200
+            var moveDistance = (0-index)*200 - n1 + 'px'
+          }
+
+
+
           this.thumbStyle = {
             transition: '0.5s all ease',
             transform: "translate(" + moveDistance + ", 0)"
@@ -133,37 +142,6 @@ export default {
             },700)
           }
         }
-      }else{
-        if(index == this.currentIndex){
-          this.isRotate = false
-        }else{
-          var n1 = this.$refs.scrollDiv.getBoundingClientRect().left
-          this.currentIndex = index
-          console.log(index, this.currentContentIndex)
-          this.clickMove = (0-index)*200
-          var moveDistance = (0-index)*200 + 'px'
-          this.thumbStyle = {
-            transition: '0.5s all ease',
-            transform: "translate(" + moveDistance + ", 0)"
-          }
-
-          setTimeout(()=>{
-            this.currentContentIndex = this.currentIndex
-            this.$refs.imgBack.style.background = this.thumbArray[this.currentContentIndex].color
-          },280)
-
-          if(this.isRotate == true){
-            console.log('antialiased')
-          }else{
-            this.isRotate = true
-            this.isColor = true
-            setTimeout(()=>{
-              this.isRotate = false
-              this.isColor = false
-            },700)
-          }
-        }
-      }
       this.step = -index
       console.log(this.clickMove)
     },
@@ -190,7 +168,7 @@ export default {
       let timer = null
       var once = false
 
-      if(this.screenWidth<1920){
+      if(this.screenWidth<1440){
         timer = setTimeout(()=>{
           n2 = this.$refs.scrollDiv.getBoundingClientRect().left
           if(n1 == n2){
@@ -247,7 +225,64 @@ export default {
             }
           }
         },30)
-      }else{
+      }else if(this.screenWidth>=1440 && this.screenWidth<1920){
+        timer = setTimeout(()=>{
+          n2 = this.$refs.scrollDiv.getBoundingClientRect().left
+          if(n1 == n2){
+            if(n1%150 >= -75){
+              type = 1
+            }else if(n1%150 <-75){
+              type = 2
+            }
+            if(type ==1){
+                var controlLength = parseInt(ml/150)*150-n1 + 'px'
+                this.thumbStyle = {
+                  transition: '0.5s all ease',
+                  transform: "translate(" + controlLength + ", 0)"
+                }
+                console.log(parseInt(ml/150))
+                setTimeout(()=>{
+                  this.currentContentIndex = -(parseInt(ml/150))
+                  this.currentIndex = this.currentContentIndex
+                  this.$refs.imgBack.style.background = this.thumbArray[this.currentContentIndex].color
+                },280)
+                if(this.isRotate == true){
+                  console.log('antialiased')
+                }else{
+                  this.isRotate = true
+                  this.isColor = true
+                  setTimeout(()=>{
+                    this.isRotate = false
+                    this.isColor = false
+                  },700)
+                }
+            }else if (type == 2) {
+              var controlLength = (parseInt(ml/150)-1)*150-n1 + 'px'
+              this.thumbStyle = {
+                transition: '0.5s all ease',
+                transform: "translate(" + controlLength + ", 0)"
+              }
+              console.log(parseInt(ml/150))
+
+              setTimeout(()=>{
+                this.currentContentIndex = -(parseInt(ml/150)-1)
+                this.currentIndex = this.currentContentIndex
+                this.$refs.imgBack.style.background = this.thumbArray[this.currentContentIndex].color
+              },280)
+              if(this.isRotate == true){
+                console.log('antialiased')
+              }else{
+                this.isRotate = true
+                this.isColor = true
+                setTimeout(()=>{
+                  this.isRotate = false
+                  this.isColor = false
+                },700)
+              }
+            }
+          }
+        },30)
+      }else if(this.screenWidth>=1920){
         timer = setTimeout(()=>{
           n2 = this.$refs.scrollDiv.getBoundingClientRect().left
           if(n1 == n2){
@@ -329,9 +364,11 @@ export default {
             console.log(this.step)
           }
         }
-        if(this.screenWidth>=1024 && this.screenWidth<1920){
+        if(this.screenWidth<1440){
           var wheelLength = this.step*100 + 'px'
-        }else{
+        }else if(this.screenWidth>=1440 && this.screenWidth<1920){
+          var wheelLength = this.step*150 + 'px'
+        }else if(this.screenWidth>=1920){
           var wheelLength = this.step*200 + 'px'
         }
         this.thumbStyle = {
@@ -361,50 +398,57 @@ export default {
   mounted(){
     this.$nextTick(() => {
       var that = this
+      // console.log(that.thumbArray.length)
       //判断loading结束
       if(that.$store.state.loadingState == 0){
         that.loadingEnd = true
       }
-      // if(that.$store.state.loadingState == false){
-      //
-      //   setTimeout(()=>{
-      //     that.entranceAniOp = {animation: 'fadeIn', animationDuration: '2s'}
-      //   },100)
-      // }
       window.addEventListener('resize', that.onResize);
 
 
       //window.addEventListener('mousewheel', that.wheelInit);
       that.currentContentIndex = that.currentIndex
-      this.$refs.imgBack.style.background = this.thumbArray[this.currentContentIndex].color
+
       that.screenHeight = window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight
 
       var heightString = (that.screenHeight).toString()
       console.log(heightString)
       that.$refs.homeCon.style.height = heightString + 'px'
-      //this.screenHeight = window.innerHeight || document.body.innerHeight || document.documentElement.clientHeight
-      //this.$refs.homeCon.style.height = this.screenHeight.toString()
 
       //自定义滑动div宽度
-      if(that.screenWidth<1920){
+      if(that.screenWidth<1440){
         var scrollWidth = that.thumbArray.length*100 + that.screenWidth - 100 + 'px'
         console.log(scrollWidth)
         that.$refs.scrollDiv.style.width = scrollWidth
         var moveDistance = '0px'
-        this.currentIndex = 0
-        this.currentContentIndex = 0
-        this.thumbStyle = {
+        that.currentIndex = 0
+        that.currentContentIndex = 0
+        that.$refs.imgBack.style.background = that.thumbArray[that.currentContentIndex].color
+        that.thumbStyle = {
           transition: '0.5s all ease',
           transform: "translate(" + moveDistance + ", 0)"
         }
-      }else{
+      }else if(that.screenWidth>=1440 && that.screenWidth<1920){
+        var scrollWidth = that.thumbArray.length*150 + that.screenWidth - 150 + 'px'
+        console.log(scrollWidth)
+        that.$refs.scrollDiv.style.width = scrollWidth
+        var moveDistance = '-1800px'
+        that.currentIndex = 12
+        that.currentContentIndex = 12
+        that.$refs.imgBack.style.background = that.thumbArray[that.currentContentIndex].color
+        that.thumbStyle = {
+          transition: '0.5s all ease',
+          transform: "translate(" + moveDistance + ", 0)"
+        }
+      }else if(that.screenWidth>=1920){
         var scrollWidth = that.thumbArray.length*200 + that.screenWidth - 200 + 'px'
         console.log(scrollWidth)
         that.$refs.scrollDiv.style.width = scrollWidth
         var moveDistance = '-2400px'
-        this.currentIndex = 12
-        this.currentContentIndex = 12
-        this.thumbStyle = {
+        that.currentIndex = 12
+        that.currentContentIndex = 12
+        that.$refs.imgBack.style.background = that.thumbArray[that.currentContentIndex].color
+        that.thumbStyle = {
           transition: '0.5s all ease',
           transform: "translate(" + moveDistance + ", 0)"
         }
@@ -419,9 +463,11 @@ export default {
   watch: {
     screenWidth(val){
       //this.screenWidth = val
-      if(val<1920){
+      if(val<1440){
         var scrollWidth = this.thumbArray.length*100 + val - 100 + 'px'
-      }else {
+      }else if(val>=1440 && val<1920){
+        var scrollWidth = this.thumbArray.length*150 + val - 150 + 'px'
+      }else if(val>=1920){
         var scrollWidth = this.thumbArray.length*200 + val - 200 + 'px'
       }
 

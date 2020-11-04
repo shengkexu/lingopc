@@ -172,6 +172,32 @@ import yangwuxian9 from '../assets/caseDetail/yangwuxian/9.jpg'
 import yangwuxian10 from '../assets/caseDetail/yangwuxian/10.jpg'
 import yangwuxian11 from '../assets/caseDetail/yangwuxian/11.jpg'
 
+//dianren
+import dianren from '../assets/caseMain/dianren/dianren.png'
+import dianrenW from '../assets/caseMain/dianren/dianren3.png'
+import dianren1 from '../assets/caseDetail/dianren/1.jpg'
+import dianren2 from '../assets/caseDetail/dianren/2.jpg'
+import dianren3 from '../assets/caseDetail/dianren/3.jpg'
+import dianren4 from '../assets/caseDetail/dianren/4.jpg'
+import dianren5 from '../assets/caseDetail/dianren/5.jpg'
+import dianren6 from '../assets/caseDetail/dianren/6.jpg'
+import dianren7 from '../assets/caseDetail/dianren/7.jpg'
+import dianren8 from '../assets/caseDetail/dianren/8.jpg'
+import dianren9 from '../assets/caseDetail/dianren/9.jpg'
+import dianren10 from '../assets/caseDetail/dianren/10.jpg'
+import dianren11 from '../assets/caseDetail/dianren/11.jpg'
+import dianren12 from '../assets/caseDetail/dianren/12.jpg'
+import dianren13 from '../assets/caseDetail/dianren/13.jpg'
+import dianren14 from '../assets/caseDetail/dianren/14.jpg'
+import dianren15 from '../assets/caseDetail/dianren/15.jpg'
+import dianren16 from '../assets/caseDetail/dianren/16.jpg'
+import dianren17 from '../assets/caseDetail/dianren/17.jpg'
+import dianren18 from '../assets/caseDetail/dianren/18.jpg'
+import dianren19 from '../assets/caseDetail/dianren/19.jpg'
+import dianren20 from '../assets/caseDetail/dianren/20.jpg'
+import dianren21 from '../assets/caseDetail/dianren/21.jpg'
+import dianren22 from '../assets/caseDetail/dianren/22.jpg'
+
 
 var caseDetail = [
   {
@@ -727,7 +753,7 @@ var caseDetail = [
     id: '10',
     color: '#92D192',
     logo: hengshoutang,
-    type: 1,
+    type: 2,
     logoW: hengshoutangW,
     descm: '2017 - vis视觉识别系统',
     mod: 1,
@@ -912,6 +938,125 @@ var caseDetail = [
         id: '11',
         src: yangwuxian11,
         srcList: [yangwuxian11]
+      }
+    ]
+  },
+  {
+    id: '13',
+    color: '#2497AF',
+    logo: dianren,
+    type: 2,
+    logoW: dianrenW,
+    descm: '2017 - vis视觉识别系统',
+    mod: 1,
+    name: '滇仁',
+    desc: '茶，是大自然赐予人类的福泽\n中国人传承了5000年的茶文化，我们发现、创造、演绎，我们通过一杯茶，去感知，感知土壤、草木、气候，以及时间和人情\n我们因为茶而通达了美，那是东方的，中国的审美\n我认为茶的品悟，是一种的生活的姿态\n从物质到精神，从理性到感性的升华\n是一种人与人，人与自然的连接',
+    cover: {src: dianren1,srcList:[dianren1]},
+    image:[
+      {
+        id: '2',
+        src: dianren2,
+        srcList: [dianren2]
+      },
+      {
+        id: '3',
+        src: dianren3,
+        srcList: [dianren3]
+      },
+      {
+        id: '4',
+        src: dianren4,
+        srcList: [dianren4]
+      },
+      {
+        id: '5',
+        src: dianren5,
+        srcList: [dianren5]
+      },
+      {
+        id: '6',
+        src: dianren6,
+        srcList: [dianren6]
+      },
+      {
+        id: '7',
+        src: dianren7,
+        srcList: [dianren7]
+      },
+      {
+        id: '8',
+        src: dianren8,
+        srcList: [dianren8]
+      },
+      {
+        id: '9',
+        src: dianren9,
+        srcList: [dianren9]
+      },
+      {
+        id: '10',
+        src: dianren10,
+        srcList: [dianren10]
+      },
+      {
+        id: '11',
+        src: dianren11,
+        srcList: [dianren11]
+      },
+      {
+        id: '12',
+        src: dianren12,
+        srcList: [dianren12]
+      },
+      {
+        id: '13',
+        src: dianren13,
+        srcList: [dianren13]
+      },
+      {
+        id: '14',
+        src: dianren14,
+        srcList: [dianren14]
+      },
+      {
+        id: '15',
+        src: dianren15,
+        srcList: [dianren15]
+      },
+      {
+        id: '16',
+        src: dianren16,
+        srcList: [dianren16]
+      },
+      {
+        id: '17',
+        src: dianren17,
+        srcList: [dianren17]
+      },
+      {
+        id: '18',
+        src: dianren18,
+        srcList: [dianren18]
+      },
+      {
+        id: '19',
+        src: dianren19,
+        srcList: [dianren19]
+      },
+      {
+        id: '20',
+        src: dianren20,
+        srcList: [dianren20]
+      },
+      {
+        id: '21',
+        src: dianren21,
+        srcList: [dianren21]
+      },
+      {
+        id: '22',
+        src: dianren22,
+        srcList: [dianren22]
       }
     ]
   },

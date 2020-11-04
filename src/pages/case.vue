@@ -9,6 +9,7 @@
               <img ref="caseTopLogoImg" src="../assets/menu/logo-f.png" alt="凌言广告">
           </div>
           <div class="caseDLogoCon" ref="caseDLogoCon">
+            <div class="fakeUpCon"></div>
             <img v-if="mainContent[currentIndex].type == 1" ref="caseDLogo" class="caseDLogo" :src="mainContent[currentIndex].logo" alt="凌言广告">
             <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" :src="mainContent[currentIndex].logo" alt="凌言广告">
             <!-- <img v-if="mainContent[currentIndex].type == 2" ref="caseDLogo2" class="caseDLogo2" src="../assets/loading.png" alt="xibei"> -->
@@ -40,8 +41,7 @@
       <div class="caseContentCon" v-if="mainContent[currentIndex].mod == 1">
         <el-image
           class="caseContentImg"
-          :src="mainContent[currentIndex].cover.src"
-          :preview-src-list="mainContent[currentIndex].cover.srcList">
+          :src="mainContent[currentIndex].cover.src">
           <div slot="placeholder" class="image-slot" lazy>
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
@@ -55,7 +55,6 @@
         <el-image
           v-for="(img, index) in mainContent[currentIndex].image"
           :src="img.src"
-          :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index"
           lazy
@@ -70,8 +69,7 @@
       <div class="caseContentCon" v-if="mainContent[currentIndex].mod == 2">
         <el-image
           class="caseContentImg"
-          :src="mainContent[currentIndex].cover1.src"
-          :preview-src-list="mainContent[currentIndex].cover1.srcList" lazy>
+          :src="mainContent[currentIndex].cover1.src" lazy>
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
@@ -84,8 +82,7 @@
         </div>
         <el-image
           class="caseContentImg"
-          :src="mainContent[currentIndex].cover2.src"
-          :preview-src-list="mainContent[currentIndex].cover2.srcList" lazy>
+          :src="mainContent[currentIndex].cover2.src" lazy>
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
@@ -98,7 +95,6 @@
         <el-image
           v-for="(img, index) in mainContent[currentIndex].image"
           :src="img.src"
-          :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index"
           lazy
@@ -113,8 +109,7 @@
       <div class="caseContentCon" v-if="mainContent[currentIndex].mod == 3">
         <el-image
           class="caseContentImg"
-          :src="mainContent[currentIndex].cover.src"
-          :preview-src-list="mainContent[currentIndex].cover.srcList" lazy>
+          :src="mainContent[currentIndex].cover.src" lazy>
           <div slot="placeholder" class="image-slot">
             加载中<span class="dot">... o(￣▽￣)ｄ</span>
           </div>
@@ -128,7 +123,6 @@
         <el-image
           v-for="(img, index) in mainContent[currentIndex].image1"
           :src="img.src"
-          :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index+12"
           lazy
@@ -147,7 +141,6 @@
         <el-image
           v-for="(img, index) in mainContent[currentIndex].image2"
           :src="img.src"
-          :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index+33"
           lazy
@@ -166,7 +159,6 @@
         <el-image
           v-for="(img, index) in mainContent[currentIndex].image3"
           :src="img.src"
-          :preview-src-list="img.srcList"
           class="caseContentImg"
           :key="index+55"
           lazy
@@ -206,7 +198,7 @@
           </div>
         </div> -->
         <div class="footer" @click="gotoContact()">
-          <p>联系我们~(*/ω＼*)</p>
+          <p>联系我们</p>
         </div>
       </div>
     </div>
@@ -279,13 +271,13 @@ export default {
       ref.caseDLogoCon.style.marginTop = '0'
 
 
-      if(this.screenWidth<1920){
+      if(this.screenWidth<1440){
         if(this.mainContent[this.currentIndex].type == 1){
           ref.caseDLogo.style.width = '80px'
         }else{
           ref.caseDLogo2.style.width = '120px'
         }
-      }else if(this.screenWidth>=1920){
+      }else if(this.screenWidth>=1440){
         if(this.mainContent[this.currentIndex].type == 1){
           ref.caseDLogo.style.width = '160px'
         }else{
@@ -584,7 +576,7 @@ export default {
       this.$refs.caseColor.style.background = this.mainContent[val].color
       this.$nextTick(()=>{
         setTimeout(()=>{
-          if(this.screenWidth<1920){
+          if(this.screenWidth<1440){
             if(this.mainContent[val].type == 1){
               this.$refs.caseDLogo.style.width = '80px'
             }else{

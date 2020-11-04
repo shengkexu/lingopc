@@ -34,12 +34,13 @@
         <div class="aboutTextCon entranceAbout3">
           <div class="aboutTextTitleCon">
             <p class="aboutTitle">关于我们</p>
-            <p class="aboutEng">ABOUT</p>
+
           </div>
           <div class="aboutLine"></div>
           <div class="aboutTextBot">
             <p>北岛说，<br/>“只有诗歌，才能让我们的舌头得救；而只有设计才能让我们的眼睛获得新生。”<br/>LINGOO专注于品牌策略、品牌创意与设计、品牌传播与营销，核心成员来自国内外知名设计公司，和4A公司骨干。</p>
           </div>
+          <p class="aboutEng">ABOUT</p>
         </div>
       </div>
 
@@ -110,10 +111,13 @@ export default {
       if(this.currentWidth<1440){
         // this.sliderWidth = '100%'
         this.sliderHeight = this.currentWidth*3/5 + 'px'
-      }else{
-        // this.sliderWidth = '50%'
-        this.sliderHeight = this.currentWidth*3/5*0.75 + 'px'
+      }else if(this.currentWidth>=1440 && this.currentWidth<1920){
+        // this.sliderHeight = this.currentWidth*7/10*0.75 + 'px'
+        this.sliderHeight = '82vh'
         console.log(this.$refs)
+        this.$refs.aboutRigntBotCon.style.height = this.sliderHeight
+      }else if(this.currentWidth>=1920){
+        this.sliderHeight = this.currentWidth*3/5*0.75 + 'px'
         this.$refs.aboutRigntBotCon.style.height = this.sliderHeight
       }
       console.log(this.sliderHeight)
@@ -157,10 +161,13 @@ export default {
     window.addEventListener('fullscreenchange', this.checkFull)
     this.currentWidth = document.body.clientWidth
     if(this.currentWidth<1440){
-      // this.sliderWidth = '100%'
       this.sliderHeight = this.currentWidth*3/5 + 'px'
-    }else{
-      // this.sliderWidth = '50%'
+      this.$refs.aboutRigntBotCon.style.height = this.sliderHeight
+    }else if(this.currentWidth>=1440 && this.currentWidth<1920){
+      this.sliderHeight = '82vh'
+      // this.sliderHeight = this.currentWidth*7/10*0.75 + 'px'
+      this.$refs.aboutRigntBotCon.style.height = this.sliderHeight
+    }else if(this.currentWidth>=1920){
       this.sliderHeight = this.currentWidth*3/5*0.75 + 'px'
       this.$refs.aboutRigntBotCon.style.height = this.sliderHeight
     }

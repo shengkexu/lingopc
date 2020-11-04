@@ -46,6 +46,10 @@ import yangwuxian from '../assets/caseThumb/yangwuxianlogo.png'
 import yangwuxianMain from '../assets/caseMain/yangwuxian/yangwuxianMain.png'
 import yangwuxianB from '../assets/caseMain/yangwuxian/yangwuxian.png'
 
+import dianren from '../assets/caseThumb/dianrenlogo.png'
+import dianrenMain from '../assets/caseMain/dianren/dianrenMain.png'
+import dianrenB from '../assets/caseMain/dianren/dianren.png'
+
 var homeContent = [
   {
     id: '1',
@@ -145,7 +149,7 @@ var homeContent = [
     bcImg: hengshoutangMain,
     logoB: hengshoutangB,
     desc: '2019 - vis视觉识别系统',
-    type: 1
+    type: 2
   },
   {
     id: '11',
@@ -166,6 +170,16 @@ var homeContent = [
     logoB: yangwuxianB,
     desc: '2019 - vis视觉识别系统',
     type: 1
+  },
+  {
+    id: '13',
+    name: '滇仁',
+    color: '#2497AF',
+    url: dianren,
+    bcImg: dianrenMain,
+    logoB: dianrenB,
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   },
   {
     id: '1',
@@ -265,7 +279,7 @@ var homeContent = [
     bcImg: hengshoutangMain,
     logoB: hengshoutangB,
     desc: '2019 - vis视觉识别系统',
-    type: 1
+    type: 2
   },
   {
     id: '11',
@@ -286,7 +300,17 @@ var homeContent = [
     logoB: yangwuxianB,
     desc: '2019 - vis视觉识别系统',
     type: 1
-  }
+  },
+  {
+    id: '13',
+    name: '滇仁',
+    color: '#2497AF',
+    url: dianren,
+    bcImg: dianrenMain,
+    logoB: dianrenB,
+    desc: '2019 - vis视觉识别系统',
+    type: 2
+  },
 ]
 
 export default homeContent

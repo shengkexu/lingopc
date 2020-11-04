@@ -1049,7 +1049,65 @@ body{
 
 
 /* 自适应 */
+/* 1440 caseDetail page and loading page and menu page */
 @media screen and (min-width:1440px){
+  #menuToggle
+  {
+    display: block;
+    position: fixed;
+    top: 80px;
+    right: 80px;
+  }
+  #menuToggle span
+  {
+    width: 40px;
+    height: 3px !important;
+    margin-bottom: 8px;
+  }
+
+  #menuToggle span:first-child
+  {
+    /* height: 2px !important; */
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2)
+  {
+    height: 3px !important;
+    transform-origin: 0% 100%;
+    width: 28px;
+  }
+
+  .ham1{
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, -6px);
+  }
+  .menu ul{
+    margin-top: 370px;
+  }
+  .addressIcon{
+    font-size: 12px !important;
+  }
+  .menuAdress{
+    font-size: 12px;
+  }
+  .menuWord{
+    font-size: 36px;
+    padding: 40px 0;
+  }
+  .menuWord p{
+    margin-left: -35.4px;
+  }
+  .currentMenuLine{
+    width: 70px;
+    top: 45px;
+    margin-left: -35px;
+  }
+
+
+
+
+
   .bottomCon{
     margin-bottom: 40px;
   }
@@ -1177,7 +1235,190 @@ body{
   }
 
 }
+/* home page and menu page*/
+@media screen and (min-width: 1440px) {
+  .logo{
+    position: absolute;
+    left: 80px;
+    top: 39px;
+    width: 174px;
+    height: auto;
+  }
+  .mainLogo{
+    margin-top: 0;
+    width: 174px;
+    height: 80px;
+  }
+  .caseTitleCon{
+    position: absolute;
+    left: 75%;
+    top: 40%;
+    text-align: left;
+  }
 
+
+  .bigShowCon{
+    position: absolute;
+    /* width: 100vw; */
+    margin-top: 16vh;
+    min-height: 480px;
+    /* background: red; */
+  }
+  .test1{
+    width: 220px;
+    height: 330px;
+  }
+  .caseImg{
+    width: 360px;
+    height: 450px;
+    margin-left: -180px;
+    margin-top: -225px;
+  }
+  .imgBack{
+    width: 280px;
+    height: 400px;
+  }
+  .caseLogo{
+    width: 72px;
+  }
+  .caseLogo2{
+    width: 108px;
+  }
+  .caseNumWordConP{
+    font-size: 12px;
+  }
+
+
+
+
+  .caseTitle{
+    margin-top: 10px;
+    font-size: 42px;
+    font-family: aliFontM;
+    color: #333333;
+  }
+  .caseDesc1{
+    display: none;
+  }
+  .caseDesc2{
+    font-family: aliFontM;
+    margin-top: 28px;
+    /* margin-bottom: 8px; */
+    margin-left: 0px;
+    font-size: 13px;
+    float: none;
+    /* display: none; */
+  }
+  .caseConUpCon3B{
+    /* margin-top: 15px; */
+    display: block;
+  }
+  .thumbTitleCon{
+    justify-content: flex-start;
+    transition: 0.5s all ease;
+  }
+  .thumbTitleCon:hover{
+    color: #FC4719;
+    cursor: pointer;
+  }
+
+  .thumbTitle{
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .thumbArrow{
+    margin-left: 5px;
+    font-size: 8px;
+    margin-top: 20px;
+  }
+
+  .wheelCon p{
+    font-size: 12px;
+  }
+  .wheelCon i{
+    font-size: 12px;
+  }
+
+  /* menu page */
+  .menu ul{
+    margin-top: 220px;
+  }
+
+
+  /* thumbImg change */
+  .thumbConRe{
+    position: fixed;
+    bottom: 0;
+  }
+
+
+  .thumbCon{
+    height: 135px;
+  }
+  .thumbImg{
+    width: 150px;
+    height: 75px;
+  }
+  .thumbConS{
+    width: 4245px;
+    margin-top: 30px;
+  }
+  .thumbLine{
+    width: 2px;
+    height: 23px;
+  }
+  .thumbLine2{
+    width: 2px;
+    height: 23px;
+    margin-top: 112px;
+  }
+
+  /* detail page fake part */
+  .caseTopLogo{
+    position: absolute;
+    left: 80px;
+    top: 39px;
+    width: 174px;
+    height: auto;
+  }
+  .caseTopLogo img{
+    width: 174px;
+    height: 80px;
+  }
+
+  .fakeLogo{
+    position: absolute;
+  }
+  .fakeUpCon{
+    height: 24px;
+  }
+  .fakeBot1{
+    height: 0;
+  }
+  .fakeBot2{
+    height: 167px;
+  }
+  .mainBattle{
+    height: 643.31px;
+    margin-top: 80px;
+  }
+  .caseColor{
+    width: 360px;
+    height: 540px;
+  }
+  .caseDLogoCon{
+    width: 295px;
+    height: 444px;
+    margin-left: -147.5px;
+    margin-top: -222px;
+  }
+  .caseDLogo{
+    width: 72px;
+  }
+  .caseDLogo2{
+    width: 108px;
+  }
+}
 
 @media screen and (min-width: 1920px){
   .bottomCon{
@@ -1205,58 +1446,7 @@ body{
     color: #999;
   }
 
-  #menuToggle
-  {
-    display: block;
-    position: fixed;
-    top: 80px;
-    right: 80px;
-  }
-  #menuToggle span
-  {
-    width: 40px;
-    height: 3px !important;
-    margin-bottom: 8px;
-  }
 
-  #menuToggle span:first-child
-  {
-    /* height: 2px !important; */
-    transform-origin: 0% 0%;
-  }
-
-  #menuToggle span:nth-last-child(2)
-  {
-    height: 3px !important;
-    transform-origin: 0% 100%;
-    width: 28px;
-  }
-
-  .ham1{
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, -6px);
-  }
-  .menu ul{
-    margin-top: 370px;
-  }
-  .addressIcon{
-    font-size: 12px !important;
-  }
-  .menuAdress{
-    font-size: 12px;
-  }
-  .menuWord{
-    font-size: 36px;
-    padding: 40px 0;
-  }
-  .menuWord p{
-    margin-left: -35.4px;
-  }
-  .currentMenuLine{
-    width: 70px;
-    top: 45px;
-    margin-left: -35px;
-  }
 
 
 
@@ -1388,6 +1578,14 @@ body{
   }
 
 
+  .wheelCon p{
+    font-size: 14px;
+  }
+  .wheelCon i{
+    font-size: 16px;
+  }
+
+
 
 
   /* caseDetail */
@@ -1427,7 +1625,6 @@ body{
     margin-left: -165px;
     margin-top: -247px;
   }
-
   .caseDLogo{
     width: 80px;
   }

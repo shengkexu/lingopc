@@ -90,7 +90,7 @@
   padding: 12px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 .aboutTitle{
   float: left;
@@ -123,7 +123,7 @@
   .aboutLogo{
     position: absolute;
     left: 80px;
-    top: 55px;
+    top: 39px;
     width: 174px;
     height: auto;
   }
@@ -149,8 +149,9 @@
     width: 70vw;
   }
   .sliderImg{
-    width: 80vw;
+    width: 95vw;
     height: auto;
+    margin-left: -12.5vw;
   }
   .aboutRigntBotCon{
     height: 75vh;
@@ -186,7 +187,7 @@
     /* position: inherit; */
     position: absolute;
     top: 26vh;
-    font-size: 80px;
+    font-size: 102px;
     font-family: lackFontI;
     color: #000;
     opacity: 0.08;
@@ -196,13 +197,24 @@
     z-index: 1;
   }
   .aboutTextCon{
-    height: 300px;
+    height: 357px;
     margin-top: 0px;
     margin-bottom: 30px;
+    padding: 24px 32px;
+  }
+  .aboutLine{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 25px;
+    height: 3px;
   }
   .aboutTitle{
     /* font-size: aliFontM; */
     font-size: 28px;
+  }
+  .aboutEng{
+    text-align: right;
+    margin-top: 16px;
   }
   .aboutTextBot p {
     font-size: 14px;
