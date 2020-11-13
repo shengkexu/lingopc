@@ -330,11 +330,11 @@ export default {
       this.scrollToTop()
       if(this.screenWidth<1920){
         if(this.currentIndex == 0){
-          this.currentIndex = 11
+          this.currentIndex = this.thumbArray.length/2-1
           this.$router.push({
             path: `/case/9`
           })
-          this.currentIndexch = 11
+          this.currentIndexch = this.thumbArray.length/2-1
           //var currentWidth = this.screenWidth/2 - 50 - this.currentIndex*100 + 'px'
           // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
           // var moveDistance = (0-this.currentIndex)*100-n1 + 'px'
@@ -359,11 +359,11 @@ export default {
         }
       }else{
         if(this.currentIndex == 0){
-          this.currentIndex = 11
+          this.currentIndex = this.thumbArray.length/2-1
           this.$router.push({
             path: `/case/9`
           })
-          this.currentIndexch = 11
+          this.currentIndexch = this.thumbArray.length/2-1
           // var n1 = this.$refs.scrollDiv2.getBoundingClientRect().left
           // var moveDistance = (0-this.currentIndex)*200-n1 + 'px'
           // this.thumbStyle = {
@@ -392,7 +392,7 @@ export default {
     },
     gotoNext(){
       this.scrollToTop()
-      if(this.currentIndex == 11){
+      if(this.currentIndex == this.thumbArray.length/2 - 1){
         this.currentIndex = 0
         this.$router.push({
           path: `/case/1`

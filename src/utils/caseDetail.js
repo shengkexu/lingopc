@@ -364,45 +364,120 @@ var caseDetail = [
   },
   {
     id: '03',
-    color: '#C70000',
-    logo: xibei,
-    type: 1,
-    logoW: xibeiW,
-    descm: '2019 - 小程序设计',
+    color: '#2497AF',
+    logo: dianren,
+    type: 2,
+    logoW: dianrenW,
+    descm: '2017 - vis视觉识别系统',
     mod: 1,
-    name: '西贝莜面村',
-    desc: '旧版点餐系统色彩层次混乱、层级关系混乱、流程引导复杂，升级后的界面使视觉层级更加清晰化，样式统一化，整体视觉更加高效，提高使用率，完成销售转化；\n\n用超大幅精美美食照片带来强烈得视觉冲击体验，用没有边界得流动（上下、左右滑动），让用户可以更愉悦得浏览获取美食信息；克制色彩的使用，尽量只在关键引导操作的路径上做品牌标准色的表达，其他的用黑色灰处理，便于清晰地区分信息优先级关系，建立合理的视觉差；将图标化繁为简，由负形改成简洁的正形效果，符合现在流行和审美。',
-    cover: {src: xibei1,srcList:[xibei1]},
+    name: '滇仁',
+    desc: '茶，是大自然赐予人类的福泽\n中国人传承了5000年的茶文化，我们发现、创造、演绎，我们通过一杯茶，去感知，感知土壤、草木、气候，以及时间和人情\n我们因为茶而通达了美，那是东方的，中国的审美\n我认为茶的品悟，是一种的生活的姿态\n从物质到精神，从理性到感性的升华\n是一种人与人，人与自然的连接',
+    cover: {src: dianren1,srcList:[dianren1]},
     image:[
       {
         id: '2',
-        src: xibei2,
-        srcList: [xibei2]
+        src: dianren2,
+        srcList: [dianren2]
       },
       {
         id: '3',
-        src: xibei3,
-        srcList: [xibei3]
+        src: dianren3,
+        srcList: [dianren3]
       },
       {
         id: '4',
-        src: xibei4,
-        srcList: [xibei4]
+        src: dianren4,
+        srcList: [dianren4]
       },
       {
         id: '5',
-        src: xibei5,
-        srcList: [xibei5]
+        src: dianren5,
+        srcList: [dianren5]
       },
       {
         id: '6',
-        src: xibei6,
-        srcList: [xibei6]
+        src: dianren6,
+        srcList: [dianren6]
       },
       {
         id: '7',
-        src: xibei7,
-        srcList: [xibei7]
+        src: dianren7,
+        srcList: [dianren7]
+      },
+      {
+        id: '8',
+        src: dianren8,
+        srcList: [dianren8]
+      },
+      {
+        id: '9',
+        src: dianren9,
+        srcList: [dianren9]
+      },
+      {
+        id: '10',
+        src: dianren10,
+        srcList: [dianren10]
+      },
+      {
+        id: '11',
+        src: dianren11,
+        srcList: [dianren11]
+      },
+      {
+        id: '12',
+        src: dianren12,
+        srcList: [dianren12]
+      },
+      {
+        id: '13',
+        src: dianren13,
+        srcList: [dianren13]
+      },
+      {
+        id: '14',
+        src: dianren14,
+        srcList: [dianren14]
+      },
+      {
+        id: '15',
+        src: dianren15,
+        srcList: [dianren15]
+      },
+      {
+        id: '16',
+        src: dianren16,
+        srcList: [dianren16]
+      },
+      {
+        id: '17',
+        src: dianren17,
+        srcList: [dianren17]
+      },
+      {
+        id: '18',
+        src: dianren18,
+        srcList: [dianren18]
+      },
+      {
+        id: '19',
+        src: dianren19,
+        srcList: [dianren19]
+      },
+      {
+        id: '20',
+        src: dianren20,
+        srcList: [dianren20]
+      },
+      {
+        id: '21',
+        src: dianren21,
+        srcList: [dianren21]
+      },
+      {
+        id: '22',
+        src: dianren22,
+        srcList: [dianren22]
       }
     ]
   },
@@ -943,120 +1018,45 @@ var caseDetail = [
   },
   {
     id: '13',
-    color: '#2497AF',
-    logo: dianren,
-    type: 2,
-    logoW: dianrenW,
-    descm: '2017 - vis视觉识别系统',
+    color: '#C70000',
+    logo: xibei,
+    type: 1,
+    logoW: xibeiW,
+    descm: '2019 - 小程序设计',
     mod: 1,
-    name: '滇仁',
-    desc: '茶，是大自然赐予人类的福泽\n中国人传承了5000年的茶文化，我们发现、创造、演绎，我们通过一杯茶，去感知，感知土壤、草木、气候，以及时间和人情\n我们因为茶而通达了美，那是东方的，中国的审美\n我认为茶的品悟，是一种的生活的姿态\n从物质到精神，从理性到感性的升华\n是一种人与人，人与自然的连接',
-    cover: {src: dianren1,srcList:[dianren1]},
+    name: '西贝莜面村',
+    desc: '旧版点餐系统色彩层次混乱、层级关系混乱、流程引导复杂，升级后的界面使视觉层级更加清晰化，样式统一化，整体视觉更加高效，提高使用率，完成销售转化；\n\n用超大幅精美美食照片带来强烈得视觉冲击体验，用没有边界得流动（上下、左右滑动），让用户可以更愉悦得浏览获取美食信息；克制色彩的使用，尽量只在关键引导操作的路径上做品牌标准色的表达，其他的用黑色灰处理，便于清晰地区分信息优先级关系，建立合理的视觉差；将图标化繁为简，由负形改成简洁的正形效果，符合现在流行和审美。',
+    cover: {src: xibei1,srcList:[xibei1]},
     image:[
       {
         id: '2',
-        src: dianren2,
-        srcList: [dianren2]
+        src: xibei2,
+        srcList: [xibei2]
       },
       {
         id: '3',
-        src: dianren3,
-        srcList: [dianren3]
+        src: xibei3,
+        srcList: [xibei3]
       },
       {
         id: '4',
-        src: dianren4,
-        srcList: [dianren4]
+        src: xibei4,
+        srcList: [xibei4]
       },
       {
         id: '5',
-        src: dianren5,
-        srcList: [dianren5]
+        src: xibei5,
+        srcList: [xibei5]
       },
       {
         id: '6',
-        src: dianren6,
-        srcList: [dianren6]
+        src: xibei6,
+        srcList: [xibei6]
       },
       {
         id: '7',
-        src: dianren7,
-        srcList: [dianren7]
-      },
-      {
-        id: '8',
-        src: dianren8,
-        srcList: [dianren8]
-      },
-      {
-        id: '9',
-        src: dianren9,
-        srcList: [dianren9]
-      },
-      {
-        id: '10',
-        src: dianren10,
-        srcList: [dianren10]
-      },
-      {
-        id: '11',
-        src: dianren11,
-        srcList: [dianren11]
-      },
-      {
-        id: '12',
-        src: dianren12,
-        srcList: [dianren12]
-      },
-      {
-        id: '13',
-        src: dianren13,
-        srcList: [dianren13]
-      },
-      {
-        id: '14',
-        src: dianren14,
-        srcList: [dianren14]
-      },
-      {
-        id: '15',
-        src: dianren15,
-        srcList: [dianren15]
-      },
-      {
-        id: '16',
-        src: dianren16,
-        srcList: [dianren16]
-      },
-      {
-        id: '17',
-        src: dianren17,
-        srcList: [dianren17]
-      },
-      {
-        id: '18',
-        src: dianren18,
-        srcList: [dianren18]
-      },
-      {
-        id: '19',
-        src: dianren19,
-        srcList: [dianren19]
-      },
-      {
-        id: '20',
-        src: dianren20,
-        srcList: [dianren20]
-      },
-      {
-        id: '21',
-        src: dianren21,
-        srcList: [dianren21]
-      },
-      {
-        id: '22',
-        src: dianren22,
-        srcList: [dianren22]
+        src: xibei7,
+        srcList: [xibei7]
       }
     ]
   },

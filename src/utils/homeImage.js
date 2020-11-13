@@ -60,6 +60,11 @@ import yangwuxianMain from '../assets/caseMain/yangwuxian/yangwuxianMain.png'
 import yangwuxianB from '../assets/caseMain/yangwuxian/yangwuxian.png'
 import yangwuxianW from '../assets/caseMain/yangwuxian/yangwuxian3.png'
 
+import dianren from '../assets/caseThumb/dianrenlogo.png'
+import dianrenMain from '../assets/caseMain/dianren/dianrenMain.png'
+import dianrenB from '../assets/caseMain/dianren/dianren.png'
+import dianrenW from '../assets/caseMain/dianren/dianren3.png'
+
 
 var imageArray = [
   xibei,xibeiMain,xibeiB,xibeiW,
@@ -73,7 +78,8 @@ var imageArray = [
   shimao,shimaoMain,shimaoB,shimaoW,
   hengshoutang,hengshoutangMain,hengshoutangB,hengshoutangW,
   kajieshi,kajieshiMain,kajieshiB,kajieshiW,
-  yangwuxian,yangwuxianMain,yangwuxianB,yangwuxianW
+  yangwuxian,yangwuxianMain,yangwuxianB,yangwuxianW,
+  dianren,dianrenMain,dianrenB,dianrenW,
 ]
 
 export default imageArray

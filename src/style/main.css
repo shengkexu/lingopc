@@ -711,13 +711,14 @@ body{
 }
 .caseDescLTitleNum{
   font-size: 10px;
-  font-family: lackFontR;
+  font-family: aliFontM;
 }
 .caseDescLTitleB{
   font-size: 18px;
   font-family: aliFontM;
 }
 .caseDescLTitleDesc{
+  font-family: oppoFontR;
   font-size: 8px;
 }
 .caseDescR{
@@ -1083,7 +1084,7 @@ body{
     transform: rotate(45deg) translate(0px, -6px);
   }
   .menu ul{
-    margin-top: 370px;
+    margin-top: 20vh;
   }
   .addressIcon{
     font-size: 12px !important;
@@ -1339,10 +1340,6 @@ body{
     font-size: 12px;
   }
 
-  /* menu page */
-  .menu ul{
-    margin-top: 220px;
-  }
 
 
   /* thumbImg change */

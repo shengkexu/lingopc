@@ -73,13 +73,13 @@ var homeContent = [
   },
   {
     id: '3',
-    name: '西贝莜面村',
-    color: '#C70000',
-    url: xibei,
-    bcImg: xibeiMain,
-    logoB: xibeiB,
-    desc: '2019 - 小程序设计',
-    type: 1
+    name: '滇仁',
+    color: '#2497AF',
+    url: dianren,
+    bcImg: dianrenMain,
+    logoB: dianrenB,
+    desc: '2019 - vis视觉识别系统',
+    type: 2
   },
   {
     id: '4',
@@ -173,13 +173,13 @@ var homeContent = [
   },
   {
     id: '13',
-    name: '滇仁',
-    color: '#2497AF',
-    url: dianren,
-    bcImg: dianrenMain,
-    logoB: dianrenB,
-    desc: '2019 - vis视觉识别系统',
-    type: 2
+    name: '西贝莜面村',
+    color: '#C70000',
+    url: xibei,
+    bcImg: xibeiMain,
+    logoB: xibeiB,
+    desc: '2019 - 小程序设计',
+    type: 1,
   },
   {
     id: '1',
@@ -203,13 +203,13 @@ var homeContent = [
   },
   {
     id: '3',
-    name: '西贝莜面村',
-    color: '#C70000',
-    url: xibei,
-    bcImg: xibeiMain,
-    logoB: xibeiB,
-    desc: '2019 - 小程序设计',
-    type: 1
+    name: '滇仁',
+    color: '#2497AF',
+    url: dianren,
+    bcImg: dianrenMain,
+    logoB: dianrenB,
+    desc: '2019 - vis视觉识别系统',
+    type: 2,
   },
   {
     id: '4',
@@ -303,13 +303,13 @@ var homeContent = [
   },
   {
     id: '13',
-    name: '滇仁',
-    color: '#2497AF',
-    url: dianren,
-    bcImg: dianrenMain,
-    logoB: dianrenB,
-    desc: '2019 - vis视觉识别系统',
-    type: 2
+    name: '西贝莜面村',
+    color: '#C70000',
+    url: xibei,
+    bcImg: xibeiMain,
+    logoB: xibeiB,
+    desc: '2019 - 小程序设计',
+    type: 1
   },
 ]
 
