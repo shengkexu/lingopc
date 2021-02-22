@@ -4,7 +4,7 @@
     <!-- <div class="aboutLogo">
       <img class="aboutMainLogo" src="../assets/menu/logo-f.png" alt="logo">
     </div> -->
-    <div class="aboutLogo">
+    <div class="aboutLogo" @click="gotoHome()">
       <img class="aboutMainLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
     </div>
 
@@ -88,6 +88,20 @@ import image10 from '@/assets/lingooVi/10.jpg'
 import image11 from '@/assets/lingooVi/11.jpg'
 import image12 from '@/assets/lingooVi/12.jpg'
 import image13 from '@/assets/lingooVi/13.jpg'
+import image14 from '@/assets/lingooVi/14.jpg'
+import image15 from '@/assets/lingooVi/15.jpg'
+import image16 from '@/assets/lingooVi/16.jpg'
+import image17 from '@/assets/lingooVi/17.jpg'
+import image18 from '@/assets/lingooVi/18.jpg'
+import image19 from '@/assets/lingooVi/19.jpg'
+import image20 from '@/assets/lingooVi/20.jpg'
+import image21 from '@/assets/lingooVi/21.jpg'
+import image22 from '@/assets/lingooVi/22.jpg'
+import image23 from '@/assets/lingooVi/23.jpg'
+import image24 from '@/assets/lingooVi/24.jpg'
+import image25 from '@/assets/lingooVi/25.jpg'
+import image26 from '@/assets/lingooVi/26.jpg'
+import image27 from '@/assets/lingooVi/27.jpg'
 
 
 import Menu from '@/components/Menu.vue'
@@ -99,13 +113,18 @@ export default {
   data(){
     return{
       fullS: 0,
-      imageArray: [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13],
+      imageArray: [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,image21,image22,image23,image24,image25,image26,image27],
       sliderHeight: '0px',
       sliderWidth: '0px',
       currentWidth: document.body.clientWidth,
     }
   },
   methods: {
+    gotoHome(){
+      this.$router.push({
+        path: '/'
+      })
+    },
     onResize(){
       this.currentWidth = document.body.clientWidth
       if(this.currentWidth<1440){

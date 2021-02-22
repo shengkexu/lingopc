@@ -25,7 +25,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face{
+/* @font-face{
   font-family: 'aliFontM';
   src: url('../assets/fonts/ali-Medium.ttf')
 }
@@ -33,14 +33,14 @@
 @font-face{
   font-family: 'aliFontR';
   src: url('../assets/fonts/ali-Regular.ttf')
-}
+} */
 
 @font-face{
   font-family: 'lackFontR';
   src: url('../assets/fonts/lack-Regular.ttf')
 }
 
-@font-face{
+/* @font-face{
   font-family: 'oppoFontR';
   src: url('../assets/fonts/OPPOSans-R.ttf')
 }
@@ -48,7 +48,7 @@
 @font-face{
   font-family: 'oppoFontM';
   src: url('../assets/fonts/OPPOSans-M.ttf')
-}
+} */
 
 @font-face{
   font-family: 'lackFontI';
@@ -258,8 +258,9 @@ body{
   font-size: 22px;
   transition: all 0.8s cubic-bezier(.85,0,.21,1);
   transition-delay: 0.8s;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   height: 22px;
+  /* font-weight: 500; */
 }
 
 .menuWord1{
@@ -429,7 +430,7 @@ body{
 }
 .thumbTitle{
   font-size: 10px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   height: auto;
 }
 .thumbArrow{
@@ -464,7 +465,7 @@ body{
 }
 .wheelCon p{
   margin-bottom: 20px;
-  font-family: oppoFontR;
+  /* font-family: oppoFontR; */
   color: #333;
   font-size: 14px;
 }
@@ -571,7 +572,7 @@ body{
 .caseTitle{
   margin-top: 10px;
   font-size: 20px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   color: #333333;
 }
 
@@ -711,14 +712,14 @@ body{
 }
 .caseDescLTitleNum{
   font-size: 10px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
 }
 .caseDescLTitleB{
   font-size: 18px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
 }
 .caseDescLTitleDesc{
-  font-family: oppoFontR;
+  /* font-family: oppoFontR; */
   font-size: 8px;
 }
 .caseDescR{
@@ -743,11 +744,11 @@ body{
 }
 .caseDescLDesignerTitle{
   font-size: 12px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
 }
 .caseDescLDesignerName{
   font-size: 10px;
-  font-family: oppoFontR;
+  /* font-family: oppoFontR; */
 }
 .fakeBot1{
   display: block;
@@ -782,14 +783,14 @@ body{
   text-align: left;
   width: 100%;
   margin-top: 40px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   font-size: 14px;
   color: #333;
 }
 .caseContentDesc{
   /* margin-top: -10px; */
   text-align: left;
-  font-family: oppoFontR;
+  /* font-family: oppoFontR; */
   font-size: 10px;
   color: #999;
   line-height: 20px;
@@ -809,7 +810,7 @@ body{
 }
 .caseFooterTitle{
   font-size: 10px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   color: #333;
 }
 .caseFooterNum{
@@ -826,7 +827,7 @@ body{
   margin-top: 18px;
 }
 .thumbFooterName{
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   font-size: 20px;
   color: #000;
 }
@@ -853,7 +854,7 @@ body{
 .backHomeBtn{
   font-size: 10px;
   color: #AAA;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   /* text-decoration: underline; */
   /* padding-bottom: 10px !important; */
   border-bottom: 1px solid #AAA;
@@ -862,7 +863,7 @@ body{
 .backTopBtn{
   font-size: 10px;
   color: #333;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
 }
 .iconTop{
   font-size: 8px;
@@ -876,7 +877,7 @@ body{
   height: 12px;
   /* border: 1px solid #000; */
   font-size: 10px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   line-height: auto;
   margin: auto;
   /* border-radius: 2px; */
@@ -890,7 +891,7 @@ body{
 }
 .footer p{
   color: white;
-  font-family: oppoFontR;
+  /* font-family: oppoFontR; */
   font-size: 10px;
   line-height: 40px;
   transition: 0.5s all ease;
@@ -967,12 +968,27 @@ body{
 .bottomCon{
   margin-bottom: 20px;
 }
-.pcLoading{
-  width: 942px;
+.aniCon{
+  width: 50%;
   height: auto;
   margin-left: 50%;
   transform: translate(-50%,0);
   margin-top: 15vh;
+}
+.pcLoading{
+  width: 50%;
+  height: auto;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+  margin-top: 15vh;
+}
+.enterBtn{
+  color: #FC4719;
+  font-size: 20px;
+  font-weight: bold;
+}
+.enterBtn:hover{
+  cursor: pointer;
 }
 .loadingImg1{
   width: 100px;
@@ -984,11 +1000,11 @@ body{
 .loadingImg2{
   width: 100px;
   height: auto;
-  margin-top: 40vh;
+  margin-top: 18vh;
 }
 .loadingP1{
   font-size: 12px;
-  font-family: aliFontR;
+  /* font-family: aliFontR; */
   color: #FC4719;
 }
 .loadingP2{
@@ -1124,7 +1140,7 @@ body{
   }
   .loadingP1{
     font-size: 16px;
-    font-family: aliFontR;
+    /* font-family: aliFontR; */
     color: #FC4719;
   }
   .loadingP2{
@@ -1230,7 +1246,7 @@ body{
   }
   .footer p{
     color: white;
-    font-family: oppoFontR;
+    /* font-family: oppoFontR; */
     font-size: 24px;
     line-height: 100px;
   }
@@ -1295,14 +1311,14 @@ body{
   .caseTitle{
     margin-top: 10px;
     font-size: 42px;
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     color: #333333;
   }
   .caseDesc1{
     display: none;
   }
   .caseDesc2{
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     margin-top: 28px;
     /* margin-bottom: 8px; */
     margin-left: 0px;
@@ -1382,6 +1398,9 @@ body{
     width: 174px;
     height: 80px;
   }
+  .caseTopLogo:hover{
+    cursor: pointer;
+  }
 
   .fakeLogo{
     position: absolute;
@@ -1433,7 +1452,7 @@ body{
   }
   .loadingP1{
     font-size: 18px;
-    font-family: aliFontR;
+    /* font-family: aliFontR; */
     color: #FC4719;
   }
   .loadingP2{
@@ -1473,6 +1492,9 @@ body{
     width: 174px;
     height: auto;
   }
+  .logo:hover{
+    cursor: pointer;
+  }
   .mainLogo{
     margin-top: 0;
     width: 174px;
@@ -1497,14 +1519,14 @@ body{
   .caseTitle{
     margin-top: 10px;
     font-size: 36px;
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     color: #333333;
   }
   .caseDesc1{
     display: none;
   }
   .caseDesc2{
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     margin-top: 34px;
     /* margin-bottom: 8px; */
     margin-left: 0px;

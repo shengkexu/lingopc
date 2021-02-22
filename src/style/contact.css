@@ -31,7 +31,7 @@
 .contactWordCon p{
   font-size: 10px;
   line-height: 16px;
-  font-family: oppoFontM;
+  /* font-family: oppoFontM; */
   color: #333333;
   font-weight: normal;
 }
@@ -56,7 +56,7 @@
 .ConContent{
   margin-top: 4px;
   font-size: 10px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   color: #333;
 }
 .contactBackImg{
@@ -120,7 +120,7 @@
 
 .formTitle{
   font-size: 14px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   color: #333333;
   float: left;
 }
@@ -132,7 +132,7 @@
 .tipCon p {
   margin-left: 2px;
   font-size: 8px;
-  font-family: oppoFontR;
+  /* font-family: oppoFontR; */
   color: #333333;
 }
 
@@ -175,14 +175,14 @@ input{
   box-sizing: border-box;
   padding-top: 15px;
   font-size: 10px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
 }
 textarea{
   outline: none;
   box-sizing: border-box;
   padding-top: 0px;
   font-size: 10px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
 }
 
 .nameCon{
@@ -201,7 +201,7 @@ textarea{
   position: absolute;
   color: #333333;
   font-size: 12px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   top: 15px;
   left: 12px;
   transition: 0.3s all ease;
@@ -211,7 +211,7 @@ textarea{
   position: absolute;
   font-size: 10px;
   color: #999999;
-  font-family: aliFontR;
+  /* font-family: aliFontR; */
   top: 8px;
   left: 12px;
 }
@@ -237,7 +237,7 @@ textarea{
 .formInPara{
   font-size: 8px;
   color: #D5000B;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   position: absolute;
   right: 30px;
   top: 17px;
@@ -254,7 +254,7 @@ textarea{
 .budgetCon p{
   margin-left: 12px;
   float: left;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   font-size: 12px;
   color: #333333;
 }
@@ -263,7 +263,7 @@ textarea{
   color: #FC4719 !important;
   margin-bottom: 0px !important;
   font-size: 7px !important;
-  font-family: aliFontM !important;
+  /* font-family: aliFontM !important; */
   padding: 0px 13px !important;
   z-index: 9 !important;
 }
@@ -297,7 +297,7 @@ textarea{
   position: absolute;
   color: #333333;
   font-size: 12px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   /* margin-left: 12px; */
   top: 6px;
   left: 12px;
@@ -309,7 +309,7 @@ textarea{
   position: absolute;
   font-size: 10px;
   color: #999999;
-  font-family: aliFontR;
+  /* font-family: aliFontR; */
   top: 6px;
   left: 12px;
 }
@@ -337,7 +337,7 @@ textarea{
 .formInParaT{
   font-size: 8px;
   color: #D5000B;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   position: absolute;
   right: 30px;
   top: 8px;
@@ -351,7 +351,7 @@ textarea{
   width: 107px;
   height: 29px;
   font-size: 11px;
-  font-family: aliFontM;
+  /* font-family: aliFontM; */
   color: #333333;
   border: 1px solid #333333;
   line-height: 29px;
@@ -570,7 +570,7 @@ textarea{
     position: absolute;
     color: #333333;
     font-size: 18px;
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     top: 12px;
     left: 24px;
     transition: 0.3s all ease;
@@ -579,7 +579,7 @@ textarea{
     position: absolute;
     font-size: 14px;
     color: #999999;
-    font-family: aliFontR;
+    /* font-family: aliFontR; */
     top: 8px;
     left: 24px;
   }
@@ -604,7 +604,7 @@ textarea{
   .formInParaT{
     font-size: 12px;
     color: #D5000B;
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     position: absolute;
     right: 50px;
     top: 14px;
@@ -847,7 +847,7 @@ textarea{
     position: absolute;
     color: #333333;
     font-size: 18px;
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     top: 12px;
     left: 24px;
     transition: 0.3s all ease;
@@ -857,7 +857,7 @@ textarea{
     position: absolute;
     font-size: 14px;
     color: #999999;
-    font-family: aliFontR;
+    /* font-family: aliFontR; */
     top: 8px;
     left: 24px;
   }
@@ -882,7 +882,7 @@ textarea{
   .formInParaT{
     font-size: 12px;
     color: #D5000B;
-    font-family: aliFontM;
+    /* font-family: aliFontM; */
     position: absolute;
     right: 50px;
     top: 14px;

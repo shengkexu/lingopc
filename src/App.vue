@@ -33,7 +33,10 @@ export default {
     }
   },
   methods:{
-    ...mapActions(['changeLoadingState'])
+    ...mapActions(['changeLoadingState']),
+    closeLoading(){
+      this.loading = false
+    }
   },
   mounted(){
     this.$nextTick(()=>{
@@ -54,8 +57,9 @@ export default {
             loaded = loaded+1
             that.percentage = parseInt(loaded/array.length*100)
             console.log(that.percentage)
-            if(loaded == array.length){
-              that.loading = false
+            if(loaded/array.length >= 0.95){
+              //that.loading = true
+              that.closeLoading()
               that.changeLoadingState()
             }
           }

@@ -2,7 +2,7 @@
   <div class="contact" ref="contactContainer">
     <Success v-if="isPop == true" v-on:changePop="changePopStatus()"/>
     <Menu/>
-    <div class="logo">
+    <div class="logo" @click="gotoHome()">
       <img class="mainLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
     </div>
     <div class="contactInfoCon entranceAniR" v-if="currentWidth<1440">
@@ -179,6 +179,11 @@ export default {
     }
   },
   methods: {
+    gotoHome(){
+      this.$router.push({
+        path: '/'
+      })
+    },
     changeName(){
       console.log(this.nameCheck)
       this.isChangeName = true

@@ -5,7 +5,7 @@
       <div class="caseLogoCon">
         <div class="fakeLogo" ref="fakeLogo"></div>
         <div class="mainBattle" ref="mainBattle">
-          <div class="caseTopLogo">
+          <div class="caseTopLogo" @click="gotoHome()">
               <img ref="caseTopLogoImg" src="../assets/menu/logo-f.png" alt="凌言广告">
           </div>
           <div class="caseDLogoCon" ref="caseDLogoCon">
