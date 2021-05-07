@@ -20,11 +20,16 @@
               <router-link to="/contact"><a><li class="menuWord menuWord3" :class="{'menuWordChange3': isActive}"><p>联系</p><div v-if="$route.path == '/contact'" class="currentMenuLine"></div></li></a></router-link>
               <!-- <a><li class="menuWord menuWord3" :class="{'menuWordChange3': isActive}">联系</li></a> -->
           </ul>
-          <div class="menuImgCon">
+          <section class="mainSection">
+            <h1 class="MainTitle">凌言广告</h1>
+            <h2 class="Maindesc">专注于品牌策略、创意与设计、品牌传播与营销，核心成员来自国内外知名设计公司，和4A公司骨干。</h2>
+          </section>
+
+          <!-- <div class="menuImgCon">
             <img class="menuImg" src="../assets/menu/menuImg.png" alt="凌言广告">
-          </div>
+          </div> -->
           <div class="menuInfoCon">
-            <p class="menuAdress"><span class="iconfont addressIcon">&#xe654;</span>上海市长宁区仙霞路319号远东国际广场A座28楼</p>
+            <p class="menuAdress"><span class="iconfont addressIcon">&#xe654;</span>上海市普陀区丹巴路99号苏宁天御国际广场B1栋708室</p>
             <a href="#"></a> <p class="menuAdress">沪ICP备2020030931号</p>
       		 	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502005509"><p class="menuAdress">沪公网安备 31010502005509号</p></a>
           </div>

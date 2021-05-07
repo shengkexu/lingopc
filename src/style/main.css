@@ -68,6 +68,23 @@ body{
     /* max-height: 100vh; */
 }
 
+.notShow{
+  /* color: white; */
+}
+.MainTitle{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 15vh;
+  color: black;
+}
+.Maindesc{
+  width: 70%;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 18px;
+  color: black;
+}
 
 #mainNav{
   /* position: fixed; */
@@ -983,9 +1000,11 @@ body{
   margin-top: 15vh;
 }
 .enterBtn{
-  color: #FC4719;
+  /* color: #FC4719; */
+  color: black;
   font-size: 20px;
   font-weight: bold;
+  margin-top: 8%;
 }
 .enterBtn:hover{
   cursor: pointer;
@@ -1005,13 +1024,15 @@ body{
 .loadingP1{
   font-size: 12px;
   /* font-family: aliFontR; */
-  color: #FC4719;
+  /* color: #FC4719; */
+  color: black;
 }
 .loadingP2{
   font-size: 12px;
   font-family: lackFontR;
   margin-top: 16px;
-  color: #FFDCD3;
+  /* color: #FFDCD3; */
+  color: black;
 }
 .image-slot{
   line-height: 200px;
@@ -1068,6 +1089,18 @@ body{
 /* 自适应 */
 /* 1440 caseDetail page and loading page and menu page */
 @media screen and (min-width:1440px){
+  .MainTitle{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 15vh;
+  }
+  .Maindesc{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 18px;
+  }
   #menuToggle
   {
     display: block;
@@ -1128,6 +1161,9 @@ body{
   .bottomCon{
     margin-bottom: 40px;
   }
+  .enterBtn{
+    color: white;
+  }
   .loadingImg1{
     width: 150px;
     height: auto;
@@ -1141,7 +1177,7 @@ body{
   .loadingP1{
     font-size: 16px;
     /* font-family: aliFontR; */
-    color: #FC4719;
+    color: #FFEC01;
   }
   .loadingP2{
     font-size: 12px;
@@ -1453,7 +1489,7 @@ body{
   .loadingP1{
     font-size: 18px;
     /* font-family: aliFontR; */
-    color: #FC4719;
+    color: #FFEC01;
   }
   .loadingP2{
     font-size: 14px;

@@ -19,7 +19,7 @@
       </div>
       <div class="teleCon">
         <p class="ConTitle">Telephone</p>
-        <p class="ConContent">18800539408</p>
+        <p class="ConContent">18616588929</p>
       </div>
       <div class="contactBackImg">
         <img src="../assets/contact/back.png" alt="凌言广告">
@@ -129,7 +129,7 @@
         </div>
         <div class="teleCon">
           <p class="ConTitle">Telephone</p>
-          <p class="ConContent">18800539408</p>
+          <p class="ConContent">18616588929</p>
         </div>
         <div class="contactBackImg">
           <img src="../assets/contact/back.png" alt="凌言广告">

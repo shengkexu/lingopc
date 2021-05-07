@@ -57,7 +57,7 @@ export default {
             loaded = loaded+1
             that.percentage = parseInt(loaded/array.length*100)
             console.log(that.percentage)
-            if(loaded/array.length >= 0.95){
+            if(loaded/array.length >= 0.97){
               //that.loading = true
               that.closeLoading()
               that.changeLoadingState()
