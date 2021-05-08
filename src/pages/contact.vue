@@ -3,11 +3,11 @@
     <Success v-if="isPop == true" v-on:changePop="changePopStatus()"/>
     <Menu/>
     <div class="logo" @click="gotoHome()">
-      <img class="mainLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
+      <img class="mainLogo" src="../assets/menu/logo-2021.png" alt="凌言广告">
     </div>
     <div class="contactInfoCon entranceAniR" v-if="currentWidth<1440">
       <div class="contactLogoCon">
-        <img class="contactLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
+        <img class="contactLogo" src="../assets/menu/logo-2021.png" alt="凌言广告">
       </div>
       <div class="contactWordCon">
         <p>我们致力于品牌设计、产品设计、UI/用户体验设计服务、品牌包装、视觉设计等。</p>
@@ -21,9 +21,9 @@
         <p class="ConTitle">Telephone</p>
         <p class="ConContent">18616588929</p>
       </div>
-      <div class="contactBackImg">
+      <!-- <div class="contactBackImg">
         <img src="../assets/contact/back.png" alt="凌言广告">
-      </div>
+      </div> -->
     </div>
 
 
@@ -117,7 +117,7 @@
       </div>
       <div class="contactInfoCon entranceAniR">
         <div class="contactLogoCon">
-          <img class="contactLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
+          <img class="contactLogo" src="../assets/menu/logo-2021.png" alt="凌言广告">
         </div>
         <div class="contactWordCon">
           <p>我们致力于品牌设计、产品设计、UI/用户体验设计服务、品牌包装、视觉设计等。</p>
@@ -131,9 +131,9 @@
           <p class="ConTitle">Telephone</p>
           <p class="ConContent">18616588929</p>
         </div>
-        <div class="contactBackImg">
+        <!-- <div class="contactBackImg">
           <img src="../assets/contact/back.png" alt="凌言广告">
-        </div>
+        </div> -->
       </div>
 
     </div>

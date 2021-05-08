@@ -34,7 +34,7 @@
   height: 7px !important;
   border-radius: 0 !important;
   border: none !important;
-  background: #FC4719 !important;
+  background: #1944AF !important;
   margin-top: -5px;
 
 }
@@ -44,7 +44,7 @@
 }
 .el-slider__bar{
   height: 1px !important;
-  background: #FC4719 !important;
+  background: #1944AF !important;
 }
 .el-slider__button-wrapper{
   z-index: 9 !important;
@@ -71,7 +71,7 @@
   }
   .el-carousel__arrow:hover{
     background: white !important;
-    color: #FC4719 !important;
+    color: #1944AF !important;
   }
 }
 
@@ -82,7 +82,7 @@
     height: 24px !important;
     border-radius: 0 !important;
     border: none !important;
-    background: #FC4719 !important;
+    background: #1944AF !important;
     margin-top: -5px;
   }
   .el-slider__runway{
@@ -90,6 +90,6 @@
   }
   .el-slider__bar{
     height: 3px !important;
-    background: #FC4719 !important;
+    background: #1944AF !important;
   }
 }

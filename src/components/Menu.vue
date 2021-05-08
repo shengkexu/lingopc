@@ -12,7 +12,7 @@
         <div class="redCircle" ref="circle3" :style="redCircleScale"></div>
         <div class="menu" ref="menuWordCon">
           <div class="logo">
-            <img class="mainLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
+            <img class="mainLogo" src="../assets/menu/logo-2021.png" alt="凌言广告">
           </div>
           <ul>
               <router-link to="/home"><a><li class="menuWord menuWord1" :class="{'menuWordChange1': isActive}"><p>首页</p><div v-if="$route.path == '/home'" class="currentMenuLine"></div></li></a></router-link>

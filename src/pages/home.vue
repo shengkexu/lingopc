@@ -3,7 +3,7 @@
     <Menu/>
     <div class="caseCon" ref="homeCon" @mousewheel="wheelInit($event)">
       <div class="logo">
-        <img class="mainLogo" src="../assets/menu/logo-f.png" alt="凌言广告">
+        <img class="mainLogo" src="../assets/menu/logo-2021.png" alt="凌言广告">
       </div>
       <div class="bigShowCon" :class="{'entranceAniR' : loadingEnd}" @click="gotoDetail()" v-if="thumbArray.length !== 0">
         <div class="test1">

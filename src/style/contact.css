@@ -22,8 +22,8 @@
 }
 
 .contactLogo{
-  width: 43px;
-  height: 20px;
+  width: 20px;
+  height: auto;
 }
 .contactWordCon{
   margin-top: 7px;
@@ -39,7 +39,7 @@
   margin-top: 10px;
   width: 23px;
   height: 1px;
-  background: #FC4719;
+  background: #1944AF;
 }
 .emailCon{
   margin-top: 10px;
@@ -260,7 +260,7 @@ textarea{
 }
 
 .tool{
-  color: #FC4719 !important;
+  color: #1944AF !important;
   margin-bottom: 0px !important;
   font-size: 7px !important;
   /* font-family: aliFontM !important; */
@@ -423,7 +423,7 @@ textarea{
   }
   .contactLogo{
     /* margin-top: 2vh; */
-    width: 90px;
+    width: 45px;
     height: auto;
   }
   .contactWordCon{
@@ -621,8 +621,8 @@ textarea{
   }
   .submitBtn:hover{
     cursor: pointer;
-    border: 1px solid #FC4719;
-    background: #FC4719;
+    border: 1px solid #1944AF;
+    background: #1944AF;
     color: white;
   }
 }
@@ -702,7 +702,7 @@ textarea{
     padding: 40px 50px;
   }
   .contactLogo{
-    width: 121px;
+    width: 60px;
     height: auto;
   }
   .contactWordCon{
@@ -902,8 +902,8 @@ textarea{
   }
   .submitBtn:hover{
     cursor: pointer;
-    border: 1px solid #FC4719;
-    background: #FC4719;
+    border: 1px solid #1944AF;
+    background: #1944AF;
     color: white;
   }
 }
